@@ -1,7 +1,7 @@
-﻿// presentation.impress.Canvas :: Toggles visibility of first child elements
+﻿// presentation.impress.canvas :: Toggles visibility of first child elements
 (function ($) {
     $.types.ns('presentation.impress');
-    presentation.impress.Canvas = $.types.define(function () {
+    presentation.impress.canvas = $.types.define(function () {
         var _context;
         var _canvas;
         var _config;

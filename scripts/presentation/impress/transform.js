@@ -1,7 +1,7 @@
-﻿// presentation.impress.Transform :: Provides a uniform way to express css3 transforms/transitions on an element.
+﻿// presentation.impress.transform :: Provides a uniform way to express css3 transforms/transitions on an element.
 (function ($) {
     $.types.ns('presentation.impress');
-    presentation.impress.Transform = $.types.define(function () {
+    presentation.impress.transform = $.types.define(function () {
         var _context;
         var _config;
         var _helpers = new Tact.Dependency('IImpressHelper');
