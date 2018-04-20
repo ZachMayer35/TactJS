@@ -1,6 +1,6 @@
 ﻿// docs.PetBehavior :: A behavior that uses the docs.lib.Pet class.
 (function ($) {
-    $.types.ns('docs.demos.Lib');
+    $.types.ns('docs.demos.lib');
     $.bootloader.requireByType("docs.demos.lib.Pet");
     $.bootloader.requireByType("docs.demos.lib.Dog");
     $.bootloader.requireByType("docs.demos.lib.Cat");

@@ -6,7 +6,7 @@
     if (!docs.demos.eventable.Slider) {
         throw 'Initialization Error: docs.demos.eventable.slideToggler requires docs.demos.eventable.Slider';
     }
-    $.types.ns('docs.demos.Eventable');
+    $.types.ns('docs.demos.eventable');
     docs.demos.eventable.SlideToggler = $.types.define(function () {
         var _context;
         var _lastSlideRight;

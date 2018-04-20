@@ -16,13 +16,13 @@
     For these examples I'm going to use slightly modified versions of <strong>docs.demos.eventable.Toggler</strong>,
     and <strong>docs.demos.eventable.Slider</strong>. The modifications made would not
     affect any of the previous examples, but for the sake of clarity I'm going to put
-    these new versions in the namespace <strong>docs.demos.Queueable</strong>.</p>
+    these new versions in the namespace <strong>docs.demos.queueable</strong>.</p>
 <h3>
     docs.demos.queueable.Toggler</h3>
 <pre>// docs.demos.queueable.Toggler :: Toggles visibility of first child elements. 
 // Fires an event on toggle, and unqueues.
 (function ($) {
-    $.types.ns('docs.demos.Queueable');
+    $.types.ns('docs.demos.queueable');
     docs.demos.queueable.Toggler = $.types.define(function () {
         var _context;
         var _config;
@@ -53,7 +53,7 @@
 <pre>// docs.demos.queueable.Slider :: Slides the element a specified number of pixels 
 // left or right. Fires events for it's actions, and unqueues
 (function ($) {
-    $.types.ns('docs.demos.Queueable');
+    $.types.ns('docs.demos.queueable');
     docs.demos.queueable.Slider = $.types.define(function () {
         var _context;
         var _data;

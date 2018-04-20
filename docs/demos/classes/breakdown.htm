@@ -23,7 +23,7 @@
     also helps reinforce the idea of low coupling.
 </p>
 <p>
-    Let's say we want to create a new object in the docs.Demos namespace. The first
+    Let's say we want to create a new object in the docs.demos namespace. The first
     thing we'll do is open up our jQuery object to make our object safe for whatever
     jquery shortcut might be used. This is a best practice for working with jQuery.
 </p>
@@ -40,7 +40,7 @@
 <pre>
 (function ($) { 
     // Define a namespace
-    $.types.ns("docs.Demos");
+    $.types.ns("docs.demos");
 })(jQuery);
 </pre>
 <p>
@@ -49,7 +49,7 @@
 <pre>
 (function ($) { 
     // Define a namespace
-    $.types.ns("docs.Demos");
+    $.types.ns("docs.demos");
     // Define the Pet class.
     docs.demos.Pet = $.types.define(function() {
         
@@ -70,7 +70,7 @@
 <pre>
 (function ($) { 
     // Define a namespace
-    $.types.ns("docs.Demos");
+    $.types.ns("docs.demos");
     // Define the Pet class.
     docs.demos.Pet = $.types.define(function() {
         // Public Members
@@ -91,7 +91,7 @@
 <pre>
 (function ($) { 
     // Define a namespace
-    $.types.ns("docs.Demos");
+    $.types.ns("docs.demos");
     // Define the Pet class.
     docs.demos.Pet = $.types.define(function() {
         // Public Members
@@ -121,7 +121,7 @@
 <pre>
 (function ($) { 
     // Define a namespace
-    $.types.ns("docs.Demos");
+    $.types.ns("docs.demos");
     // Define the Pet class.
     docs.demos.Pet = $.types.define(function() {
         // Private Members
@@ -166,7 +166,7 @@
 <pre>
 (function ($) { 
     // Define a namespace
-    $.types.ns("docs.Demos");
+    $.types.ns("docs.demos");
     // Define the Pet class.
     docs.demos.Pet = $.types.define(function(name) {
         // Private Members

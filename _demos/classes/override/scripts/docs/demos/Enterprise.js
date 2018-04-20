@@ -1,6 +1,6 @@
 ﻿// an object which returns the name of the captain in Star Trek : Enterprise
 (function ($) {
-    $.types.ns("docs.Demos");
+    $.types.ns("docs.demos");
     docs.demos.Enterprise = $.types.define(function () {
 
         var self = {

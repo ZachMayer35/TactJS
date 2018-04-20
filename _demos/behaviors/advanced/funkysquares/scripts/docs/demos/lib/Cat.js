@@ -1,7 +1,7 @@
 ﻿// docs.lib.Cat :: A Cat class that requires docs.lib.Pet. Demonstrates dependencies.
 
 (function ($) {
-    $.types.ns('docs.demos.Lib');
+    $.types.ns('docs.demos.lib');
     docs.demos.lib.Cat = $.types.extend(docs.demos.lib.Pet, function (name) {
         var _speak = "Meow";
         var self = {

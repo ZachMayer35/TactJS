@@ -6,7 +6,7 @@
     if (!docs.demos.queueable.Slider) {
         throw 'Initialization Error: docs.demos.queueable.slideToggler requires docs.demos.queueable.Slider';
     }
-    $.types.ns('docs.demos.Queueable');
+    $.types.ns('docs.demos.queueable');
     docs.demos.queueable.SlideToggler = $.types.define(function () {
         var _context;
         var _lastSlideRight;

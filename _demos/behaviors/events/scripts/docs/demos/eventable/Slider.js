@@ -1,6 +1,6 @@
 ﻿// docs.eventable.Slider :: Slides the element a specified number of pixels left or right. Fires events for it's actions.
 (function ($) {
-    $.types.ns('docs.demos.Eventable');
+    $.types.ns('docs.demos.eventable');
     docs.demos.eventable.Slider = $.types.define(function () {
         var _context;
         var _data;

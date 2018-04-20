@@ -699,7 +699,7 @@
                 and <strong>docs.demos.Slider</strong> so that they can fire events. These modifications
                 could be made to our original behaviors and not affect their functionality in the
                 other examples, but for the sake of this document, I'm going to reproduce them under
-                the new namespace <strong>docs.demos.Eventable</strong>
+                the new namespace <strong>docs.demos.eventable</strong>
             </p>
             <p>
                 Here are our modified behaviors:</p>
@@ -707,7 +707,7 @@
                 docs.demos.eventable.Toggler</h4>
             <pre>// docs.demos.eventable.Toggler :: Toggles visibility of first child elements. Fires an event on toggle
 (function ($) {
-    $.types.ns('docs.demos.Eventable');
+    $.types.ns('docs.demos.eventable');
     docs.demos.eventable.Toggler = $.types.define(function () {
         var _context;
         var self = {
@@ -728,7 +728,7 @@
                 docs.demos.eventable.Slider</h4>
             <pre>// docs.demos.eventable.Slider :: Slides the element a specified number of pixels left or right. Fires events for it's actions.
 (function ($) {
-    $.types.ns('docs.demos.Eventable');
+    $.types.ns('docs.demos.eventable');
     docs.demos.eventable.Slider = $.types.define(function () {
         var _context;
         var _data;
@@ -807,7 +807,7 @@
     if (!docs.demos.eventable.Slider) {
         throw 'Initialization Error: docs.demos.eventable.slideToggler requires docs.demos.eventable.Slider';
     }
-    $.types.ns('docs.demos.Eventable');
+    $.types.ns('docs.demos.eventable');
     docs.demos.eventable.SlideToggler = $.types.define(function () {
         var _context;
         var _lastSlideRight;
@@ -885,12 +885,12 @@
                 For these examples I'm going to use slightly modified versions of <strong>docs.demos.eventable.Toggler</strong>,
                 and <strong>docs.demos.eventable.Slider</strong>. The modifications made would not affect
                 any of the previous examples, but for the sake of clarity I'm going to put these
-                new versions in the namespace <strong>docs.demos.Queueable</strong>.</p>
+                new versions in the namespace <strong>docs.demos.queueable</strong>.</p>
             <h3>
                 docs.demos.queueable.Toggler</h3>
             <pre>// docs.demos.queueable.Toggler :: Toggles visibility of first child elements. Fires an event on toggle, and unqueues.
 (function ($) {
-    $.types.ns('docs.demos.Queueable');
+    $.types.ns('docs.demos.queueable');
     docs.demos.queueable.Toggler = $.types.define(function () {
         var _context;
         var _config;
@@ -919,7 +919,7 @@
                 docs.demos.queueable.Slider</h3>
             <pre>// docs.demos.queueable.Slider :: Slides the element a specified number of pixels left or right. Fires events for it's actions, and unqueues
 (function ($) {
-    $.types.ns('docs.demos.Queueable');
+    $.types.ns('docs.demos.queueable');
     docs.demos.queueable.Slider = $.types.define(function () {
         var _context;
         var _data;
@@ -979,7 +979,7 @@
     if (!docs.demos.queueable.Slider) {
         throw 'Initialization Error: docs.demos.queueable.slideToggler requires docs.demos.queueable.Slider';
     }
-    $.types.ns('docs.demos.Eventable');
+    $.types.ns('docs.demos.eventable');
     docs.demos.queueable.SlideToggler = $.types.define(function () {
         var _context;
         var _lastSlideRight;

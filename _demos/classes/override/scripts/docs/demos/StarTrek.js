@@ -1,6 +1,6 @@
 ﻿// an object which returns the name of the captain in Star Trek : The Original Series, and extends Star Trek : Enterprise
 (function ($) {
-    $.types.ns("docs.Demos");
+    $.types.ns("docs.demos");
     docs.demos.StarTrek = $.types.extend(docs.demos.Enterprise, function () {
 
         var self = {

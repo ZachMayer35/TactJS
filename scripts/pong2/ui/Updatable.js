@@ -1,7 +1,7 @@
-﻿// Pong1.ui.Updatable :: Updates it's html value if the passed key matches config.
+﻿// pong1.ui.Updatable :: Updates it's html value if the passed key matches config.
 (function ($) {
     $.types.ns('pong2.ui.Updatable');
-    Pong2.ui.Updatable = $.types.define(function () {
+    pong2.ui.Updatable = $.types.define(function () {
         var _context;
         var _config = {
             key: ''

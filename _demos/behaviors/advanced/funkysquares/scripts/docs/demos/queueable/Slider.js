@@ -1,6 +1,6 @@
 ﻿// docs.queueable.Slider :: Slides the element a specified number of pixels left or right. Fires events for it's actions, and unqueues
 (function ($) {
-    $.types.ns('docs.demos.Queueable');
+    $.types.ns('docs.demos.queueable');
     docs.demos.queueable.Slider = $.types.define(function () {
         var _context;
         var _data;

@@ -1,6 +1,6 @@
 ﻿(function ($) {
-    $.types.ns('pong2.lib.Util');
-    Pong2.lib.Util.Position = $.types.define(function (x, y) {
+    $.types.ns('pong2.lib.util');
+    pong2.lib.util.Position = $.types.define(function (x, y) {
         var _x = x;
         var _y = y;
         var self = {

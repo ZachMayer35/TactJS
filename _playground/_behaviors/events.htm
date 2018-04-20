@@ -9,7 +9,7 @@
     and <strong>docs.demos.Slider</strong> so that they can fire events. These modifications
     could be made to our original behaviors and not affect their functionality in the
     other examples, but for the sake of this document, I'm going to reproduce them under
-    the new namespace <strong>docs.demos.Eventable</strong>
+    the new namespace <strong>docs.demos.eventable</strong>
 </p>
 <p>
     Here are our modified behaviors:</p>
@@ -18,7 +18,7 @@
 <pre>// docs.demos.eventable.Toggler :: Toggles visibility of first child elements. 
 // Fires an event on toggle
 (function ($) {
-    $.types.ns('docs.demos.Eventable');
+    $.types.ns('docs.demos.eventable');
     docs.demos.eventable.Toggler = $.types.define(function () {
         var _context;
         var self = {
@@ -40,7 +40,7 @@
 <pre>// docs.demos.eventable.Slider :: Slides the element a specified number of 
 // pixels left or right. Fires events for it's actions.
 (function ($) {
-    $.types.ns('docs.demos.Eventable');
+    $.types.ns('docs.demos.eventable');
     docs.demos.eventable.Slider = $.types.define(function () {
         var _context;
         var _data;
@@ -131,7 +131,7 @@
         throw 'Initialization Error: docs.demos.eventable.slideToggler 
             requires docs.demos.eventable.Slider';
     }
-    $.types.ns('docs.demos.Eventable');
+    $.types.ns('docs.demos.eventable');
     docs.demos.eventable.SlideToggler = $.types.define(function () {
         var _context;
         var _lastSlideRight;

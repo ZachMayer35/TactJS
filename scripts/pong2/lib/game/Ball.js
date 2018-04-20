@@ -1,12 +1,12 @@
 ﻿(function ($) {
-    $.types.ns('pong2.lib.Game');
-    Pong2.lib.Game.Ball = $.types.extend(Pong2.lib.Game.Entity, function (height, width) {        
+    $.types.ns('pong2.lib.game');
+    pong2.lib.game.Ball = $.types.extend(pong2.lib.game.Entity, function (height, width) {        
         var self = {
             moveTo: function (newX, newY, duration) {
-                var newPosition = new Pong2.lib.Util.Position(newX, newY);
+                var newPosition = new pong2.lib.util.Position(newX, newY);
                 duration ? this.movement.changePosition(this.position, newPosition, duration) : this.movement.setPosition(this.position, newPosition);
             },
-            movement: new Pong2.lib.Util.Move()           
+            movement: new pong2.lib.util.Move()           
         };
         return self;
     });

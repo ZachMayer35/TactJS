@@ -1,7 +1,7 @@
 ﻿// A simple Pet object
 (function ($) {
     // Define a namespace
-    $.types.ns("docs.Demos");
+    $.types.ns("docs.demos");
     // Define the Pet class.
     docs.demos.Pet = $.types.define(function (name) {
         // Private Members
