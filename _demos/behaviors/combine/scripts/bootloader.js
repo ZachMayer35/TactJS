@@ -1,5 +1,5 @@
 ﻿//configuration
-var _scriptsRoot = "Scripts/";
+var _scriptsRoot = "scripts/";
 var _bootstrap = "core.js";
 
 //jQuery plugins
