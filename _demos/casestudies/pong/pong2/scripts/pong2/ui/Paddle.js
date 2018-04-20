@@ -1,6 +1,6 @@
 ﻿// Pong1.ui.Paddle :: A Pong Paddle controlled by either an AI or player.
 (function ($) {
-    $.types.ns('Pong2.ui.Paddle');
+    $.types.ns('pong2.ui.Paddle');
     Pong2.ui.Paddle = $.types.define(function () {
         var _context;
         var _field;

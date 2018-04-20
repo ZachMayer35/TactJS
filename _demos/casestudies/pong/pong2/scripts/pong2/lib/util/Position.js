@@ -1,5 +1,5 @@
 ﻿(function ($) {
-    $.types.ns('Pong2.lib.Util');
+    $.types.ns('pong2.lib.Util');
     Pong2.lib.Util.Position = $.types.define(function (x, y) {
         var _x = x;
         var _y = y;

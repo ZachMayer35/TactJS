@@ -1,5 +1,5 @@
 ﻿(function ($) {
-    $.types.ns('Pong2.lib.Game');
+    $.types.ns('pong2.lib.Game');
     Pong2.lib.Game.Entity = $.types.define(function (h, w) {
         var _height = h;
         var _width = w;

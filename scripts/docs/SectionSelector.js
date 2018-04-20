@@ -1,6 +1,6 @@
 ﻿
 (function ($) {
-    $.types.ns('Docs');
+    $.types.ns('docs');
     docs.SectionSelector = $.types.define(function () {
         var _el;
         var _config;

@@ -1,7 +1,7 @@
 ﻿// docs.Logger :: Hooks onto unit tests and writes their results to the element.
 
 (function ($) {
-    $.types.ns('Docs');
+    $.types.ns('docs');
     docs.Logger = $.types.define(function () {
         var _context;
         var _data;

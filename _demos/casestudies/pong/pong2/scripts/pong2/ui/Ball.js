@@ -1,6 +1,6 @@
 ﻿// Pong1.ui.Ball :: A Pong Ball.
 (function ($) {
-    $.types.ns('Pong2.ui.Ball');
+    $.types.ns('pong2.ui.Ball');
     Pong2.ui.Ball = $.types.define(function () {
         var _context;
         var _config = {

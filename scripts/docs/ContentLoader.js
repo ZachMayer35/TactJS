@@ -1,5 +1,5 @@
 ﻿(function ($) {
-    $.types.ns('Docs');
+    $.types.ns('docs');
     docs.ContentLoader = $.types.define(function () {
         var _context;
         var _config;

@@ -1,5 +1,5 @@
 ﻿(function ($) {
-    $.types.ns('Pong2.lib.Util');
+    $.types.ns('pong2.lib.Util');
     Pong2.lib.Util.Move = $.types.define(function () {
         var _tick = 10; //milliseconds per cycle
 

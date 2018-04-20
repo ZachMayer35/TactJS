@@ -1,6 +1,6 @@
 ﻿// docs.HTMLEncode. Converts a section of HTML to encoded text and renders the result to the DOM.
 (function ($) {
-    $.types.ns('Docs');
+    $.types.ns('docs');
     docs.HTMLEncode = $.types.define(function () {
         var _context;
         var _config;

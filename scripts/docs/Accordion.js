@@ -1,7 +1,7 @@
 ﻿// docs.tabs :: Jquery UI Accordion
 
 (function ($) {
-    $.types.ns('Docs');
+    $.types.ns('docs');
     docs.Accordion = $.types.define(function () {
         var _context;
         var _data;
