@@ -23,7 +23,7 @@
     also helps reinforce the idea of low coupling.
 </p>
 <p>
-    Let's say we want to create a new object in the Docs.Demos namespace. The first
+    Let's say we want to create a new object in the docs.Demos namespace. The first
     thing we'll do is open up our jQuery object to make our object safe for whatever
     jquery shortcut might be used. This is a best practice for working with jQuery.
 </p>
@@ -40,7 +40,7 @@
 <pre>
 (function ($) { 
     // Define a namespace
-    $.types.ns("Docs.Demos");
+    $.types.ns("docs.Demos");
 })(jQuery);
 </pre>
 <p>
@@ -49,9 +49,9 @@
 <pre>
 (function ($) { 
     // Define a namespace
-    $.types.ns("Docs.Demos");
+    $.types.ns("docs.Demos");
     // Define the Pet class.
-    Docs.Demos.Pet = $.types.define(function() {
+    docs.demos.Pet = $.types.define(function() {
         
     });
 })(jQuery);
@@ -70,9 +70,9 @@
 <pre>
 (function ($) { 
     // Define a namespace
-    $.types.ns("Docs.Demos");
+    $.types.ns("docs.Demos");
     // Define the Pet class.
-    Docs.Demos.Pet = $.types.define(function() {
+    docs.demos.Pet = $.types.define(function() {
         // Public Members
 	    var self = {
 
@@ -91,9 +91,9 @@
 <pre>
 (function ($) { 
     // Define a namespace
-    $.types.ns("Docs.Demos");
+    $.types.ns("docs.Demos");
     // Define the Pet class.
-    Docs.Demos.Pet = $.types.define(function() {
+    docs.demos.Pet = $.types.define(function() {
         // Public Members
 	    var self = {
             walk: function(){
@@ -121,9 +121,9 @@
 <pre>
 (function ($) { 
     // Define a namespace
-    $.types.ns("Docs.Demos");
+    $.types.ns("docs.Demos");
     // Define the Pet class.
-    Docs.Demos.Pet = $.types.define(function() {
+    docs.demos.Pet = $.types.define(function() {
         // Private Members
         var _walkCount = 0;
 
@@ -146,7 +146,7 @@
 </p>
 <pre>
     // Instantiate a pet object.
-    var pet = new Docs.Demos.Pet();
+    var pet = new docs.demos.Pet();
 </pre>
 <p>
     Now let's walk our new pet twice...
@@ -160,15 +160,15 @@
     That's great! Now, what if we want to give our pet a name? We could create a public
     member to store it and set that member after we create each pet, but then anyone
     could name our pets, and we might forget to name a few ourselves. Instead, let's
-    give the Docs.Demos.Pet object a constructor, and store the name as a private member.
+    give the docs.demos.Pet object a constructor, and store the name as a private member.
     Let's also change our "walk()" function to reflect our pet's names.
 </p>
 <pre>
 (function ($) { 
     // Define a namespace
-    $.types.ns("Docs.Demos");
+    $.types.ns("docs.Demos");
     // Define the Pet class.
-    Docs.Demos.Pet = $.types.define(function(name) {
+    docs.demos.Pet = $.types.define(function(name) {
         // Private Members
         var _name = name
         var _walkCount = 0;
@@ -188,7 +188,7 @@
 })(jQuery);
 </pre>
 <p>
-    Notice that the definition line of our object changed to <b>"Docs.Demos.Pet = $.types.define(function(name)
+    Notice that the definition line of our object changed to <b>"docs.demos.Pet = $.types.define(function(name)
         {"</b>. Passing arguments to the object (function()) we define gives us a constructor.
     We can have any number of arguments in that constructor, and because this is javascript
     they don't always have to be defined so keep that in mind when you create objects
@@ -200,8 +200,8 @@
 </p>
 <pre>
     // Instantiate pet objects.
-    var taboo = new Docs.Demos.Pet("Taboo");
-    var aurora = new Docs.Demos.Pet("Aurora");
+    var taboo = new docs.demos.Pet("Taboo");
+    var aurora = new docs.demos.Pet("Aurora");
 
     // Call the public Walk method
     taboo.walk(); // Taboo has been walked 1 time(s) today.

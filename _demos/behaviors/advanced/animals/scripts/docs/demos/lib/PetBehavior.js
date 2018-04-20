@@ -1,10 +1,10 @@
-﻿// Docs.PetBehavior :: A behavior that uses the Docs.Lib.Pet class.
+﻿// docs.PetBehavior :: A behavior that uses the docs.lib.Pet class.
 (function ($) {
-    $.types.ns('Docs.Demos.Lib');
-    $.bootloader.requireByType("Docs.Demos.Lib.Pet");
-    $.bootloader.requireByType("Docs.Demos.Lib.Dog");
-    $.bootloader.requireByType("Docs.Demos.Lib.Cat");
-    Docs.Demos.Lib.PetBehavior = $.types.define(function () {
+    $.types.ns('docs.demos.Lib');
+    $.bootloader.requireByType("docs.demos.lib.Pet");
+    $.bootloader.requireByType("docs.demos.lib.Dog");
+    $.bootloader.requireByType("docs.demos.lib.Cat");
+    docs.demos.lib.PetBehavior = $.types.define(function () {
         var _context;
         var _config;
         var _voiceBox;
@@ -17,7 +17,7 @@
         };
 
         var checkResources = function (config) {
-            if (Docs.Demos.Lib.Pet && Docs.Demos.Lib.Dog && Docs.Demos.Lib.Cat)
+            if (docs.demos.lib.Pet && docs.demos.lib.Dog && docs.demos.lib.Cat)
                 _resourcesLoaded = true;
 
             if (!_resourcesLoaded) {
@@ -25,10 +25,10 @@
             } else {
                 switch (config.type.toLowerCase()) {
                     case 'pet':
-                        _pet = new Docs.Demos.Lib.Pet(config.name);
+                        _pet = new docs.demos.lib.Pet(config.name);
                         break;
                     case 'dog':
-                        _pet = new Docs.Demos.Lib.Dog(config.name);
+                        _pet = new docs.demos.lib.Dog(config.name);
                         break;
                     case 'cat':
                         _pet = $.ioc.resolve('ICat', config.name);

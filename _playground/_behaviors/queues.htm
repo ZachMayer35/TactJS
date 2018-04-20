@@ -6,17 +6,17 @@
     extensions <strong>$.fn.enqueueMsg</strong> , <strong>$.fn.enqueueBroadcast</strong>,
     and <strong>$.fn.unqueue</strong>.</p>
 <p>
-    For these examples I'm going to use slightly modified versions of <strong>Docs.Demos.Eventable.Toggler</strong>,
-    and <strong>Docs.Demos.Eventable.Slider</strong>. The modifications made would not
+    For these examples I'm going to use slightly modified versions of <strong>docs.demos.eventable.Toggler</strong>,
+    and <strong>docs.demos.eventable.Slider</strong>. The modifications made would not
     affect any of the previous examples, but for the sake of clarity I'm going to put
-    these new versions in the namespace <strong>Docs.Demos.Queueable</strong>.</p>
+    these new versions in the namespace <strong>docs.demos.Queueable</strong>.</p>
 <h3>
-    Docs.Demos.Queueable.Toggler</h3>
-<pre>// Docs.Demos.Queueable.Toggler :: Toggles visibility of first child elements. 
+    docs.demos.queueable.Toggler</h3>
+<pre>// docs.demos.queueable.Toggler :: Toggles visibility of first child elements. 
 // Fires an event on toggle, and unqueues.
 (function ($) {
-    $.types.ns('Docs.Demos.Queueable');
-    Docs.Demos.Queueable.Toggler = $.types.define(function () {
+    $.types.ns('docs.demos.Queueable');
+    docs.demos.queueable.Toggler = $.types.define(function () {
         var _context;
         var _config;
         var _toggleClass;
@@ -42,12 +42,12 @@
     <strong>toggleClass</strong> so that I can specify which class or classes I want
     to toggle</p>
 <h3>
-    Docs.Demos.Queueable.Slider</h3>
-<pre>// Docs.Demos.Queueable.Slider :: Slides the element a specified number of pixels 
+    docs.demos.queueable.Slider</h3>
+<pre>// docs.demos.queueable.Slider :: Slides the element a specified number of pixels 
 // left or right. Fires events for it's actions, and unqueues
 (function ($) {
-    $.types.ns('Docs.Demos.Queueable');
-    Docs.Demos.Queueable.Slider = $.types.define(function () {
+    $.types.ns('docs.demos.Queueable');
+    docs.demos.queueable.Slider = $.types.define(function () {
         var _context;
         var _data;
         var _slideDistance;
@@ -79,9 +79,9 @@
     in the queue. The inclusion of these calls is safe in the case of an empty queue,
     and allows the queue to continue running.</p>
 <p>
-    Here's the markup for our first example using only <strong>Docs.Demos.Queueable.Slider</strong>:
+    Here's the markup for our first example using only <strong>docs.demos.queueable.Slider</strong>:
 </p>
-<pre>&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;Docs.Demos.Queueable.Slider&quot; 
+<pre>&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;docs.demos.queueable.Slider&quot; 
     data-slide-time=&quot;2000&quot; data-slide-distance=&quot;200&quot;&gt;
     &lt;div class=&quot;square bg-red pointer&quot; 
         onclick=&quot;$(this).parent().enqueueMsg(&#39;slideRight&#39;)
@@ -93,7 +93,7 @@
     immediately by a call to <strong>unqueue()</strong> to start the queue.</p>
 <p>
     When you click the square below you should see it move right, and then left.</p>
-<div class="square mas" data-behaviors-lazy="Docs.Demos.Queueable.Slider" data-slide-time="2000"
+<div class="square mas" data-behaviors-lazy="docs.demos.queueable.Slider" data-slide-time="2000"
     data-slide-distance="200">
     <div class="square bg-red pointer" onclick="$(this).parent().enqueueMsg('slideRight').enqueueMsg('slideLeft').unqueue()">
     </div>
@@ -101,23 +101,23 @@
 <h3>
     Putting It All Together</h3>
 <p>
-    Let's try a more complex example using <strong>Docs.Demos.Queueable.SlideToggler</strong>,
+    Let's try a more complex example using <strong>docs.demos.queueable.SlideToggler</strong>,
     reproduced below for your convenience.</p>
 <h4>
-    Docs.Demos.Queueable.SlideToggler</h4>
-<pre>// Docs.Demos.Queueable.SlideToggler :: Slides the element a specified number of 
+    docs.demos.queueable.SlideToggler</h4>
+<pre>// docs.demos.queueable.SlideToggler :: Slides the element a specified number of 
 // pixels left or right and then toggles the first children.
 (function ($) {
-    if (!Docs.Demos.Queueable.Toggler) {
-        throw 'Initialization Error: Docs.Demos.Queueable.slideToggler 
-            requires Docs.Demos.Queueable.Toggler';
+    if (!docs.demos.queueable.Toggler) {
+        throw 'Initialization Error: docs.demos.queueable.slideToggler 
+            requires docs.demos.queueable.Toggler';
     }
-    if (!Docs.Demos.Queueable.Slider) {
-        throw 'Initialization Error: Docs.Demos.Queueable.slideToggler 
-            requires Docs.Demos.Queueable.Slider';
+    if (!docs.demos.queueable.Slider) {
+        throw 'Initialization Error: docs.demos.queueable.slideToggler 
+            requires docs.demos.queueable.Slider';
     }
-    $.types.ns('Docs.Demos.Eventable');
-    Docs.Demos.Queueable.SlideToggler = $.types.define(function () {
+    $.types.ns('docs.demos.Eventable');
+    docs.demos.queueable.SlideToggler = $.types.define(function () {
         var _context;
         var _lastSlideRight;
 
@@ -157,8 +157,8 @@
 <p>
     The following markup demonstrates the combined effect of messaging, DOM data, combined
     behaviors, eventing, and queueing.</p>
-<pre>&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;Docs.Demos.Queueable.Toggler 
-    Docs.Demos.Queueable.Slider Docs.Demos.Queueable.SlideToggler&quot;
+<pre>&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;docs.demos.queueable.Toggler 
+    docs.demos.queueable.Slider docs.demos.queueable.SlideToggler&quot;
     data-slide-time=&quot;2000&quot; data-slide-distance=&quot;200&quot; data-toggle-class=&quot;bg-red bg-green&quot;&gt;
     &lt;div class=&quot;square bg-red pointer toggle-on&quot; 
         onclick=&quot;$(this).parent().enqueueMsg(&#39;slideToggle&#39;)
@@ -167,7 +167,7 @@
 &lt;/div&gt;</pre>
 <p>
     Click the square below to see it in action.</p>
-<div class="square mas" data-behaviors-lazy="Docs.Demos.Queueable.Toggler Docs.Demos.Queueable.Slider Docs.Demos.Queueable.SlideToggler"
+<div class="square mas" data-behaviors-lazy="docs.demos.queueable.Toggler docs.demos.queueable.Slider docs.demos.queueable.SlideToggler"
     data-slide-time="2000" data-slide-distance="200" data-toggle-class="bg-red bg-green">
     <div class="square bg-red pointer toggle-on" onclick="$(this).parent().enqueueMsg('slideToggle').enqueueMsg('slideToggle').unqueue()">
     </div>

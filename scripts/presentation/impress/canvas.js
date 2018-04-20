@@ -1,7 +1,7 @@
-﻿// Presentation.Impress.Canvas :: Toggles visibility of first child elements
+﻿// presentation.impress.Canvas :: Toggles visibility of first child elements
 (function ($) {
-    $.types.ns('Presentation.Impress');
-    Presentation.Impress.Canvas = $.types.define(function () {
+    $.types.ns('presentation.impress');
+    presentation.impress.Canvas = $.types.define(function () {
         var _context;
         var _canvas;
         var _config;
@@ -153,7 +153,7 @@
         return self;
     });
 
-    Presentation.Impress.Helpers = $.types.define(function () {
+    presentation.impress.Helpers = $.types.define(function () {
 
         var _style = document.createElement('dummy').style,
             _prefixes = 'Webkit Moz O ms Khtml'.split(' '),
@@ -207,6 +207,6 @@
         return self;
 
     });
-    $.ioc.register('IImpressHelper', Presentation.Impress.Helpers);
+    $.ioc.register('IImpressHelper', presentation.impress.Helpers);
 
 })(jQuery);

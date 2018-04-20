@@ -1,7 +1,7 @@
-﻿// Pong1.UI.Court :: Controlls and coordinates the various pieces of the Pong court
+﻿// Pong1.ui.Court :: Controlls and coordinates the various pieces of the Pong court
 (function ($) {
-    $.types.ns('Pong1.UI.Court');
-    Pong1.UI.Court = $.types.define(function () {
+    $.types.ns('Pong1.ui.Court');
+    Pong1.ui.Court = $.types.define(function () {
         var _context;
         var _config;
         var _field, _ball, _paddle1, _paddle2;

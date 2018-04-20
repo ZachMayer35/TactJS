@@ -1,7 +1,7 @@
-﻿// Docs.RightSlider :: Slides the element a specified number of pixels right.
+﻿// docs.RightSlider :: Slides the element a specified number of pixels right.
 (function ($) {
-    $.types.ns('Docs.Demos');
-    Docs.Demos.RightSlider = $.types.define(function () {
+    $.types.ns('docs.Demos');
+    docs.demos.RightSlider = $.types.define(function () {
         var _context;
         var _data;
         var _slideDistance;

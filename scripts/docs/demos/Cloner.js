@@ -2,8 +2,8 @@
 
 (function ($) {
     $.fn.outerHtml = function () { return $("<div>").append($(this).clone()).html(); }
-    $.types.ns('Docs.Demos');
-    Docs.Demos.Cloner = $.types.define(function () {
+    $.types.ns('docs.Demos');
+    docs.demos.Cloner = $.types.define(function () {
         var _context;
         var self = {
             init: function (context, config) {

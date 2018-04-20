@@ -27,7 +27,7 @@
 	<link rel="stylesheet" href="styles/shared.css" type="text/css" media="all">
 	<script>	    
 		$.types.ns('Tact.Docs');
-		Tact.Docs.SectionSelector = $.types.define(function () {
+		Tact.docs.SectionSelector = $.types.define(function () {
 		    var _el;
 		    var _config;
 		    var onClick = function (e) {
@@ -63,7 +63,7 @@
             <br />
         </div>
     </div>
-	<div class="tabs" data-behaviors-eager="Docs.Tabs" >
+	<div class="tabs" data-behaviors-eager="docs.Tabs" >
 		<ul>
 			<li><a href="#features">Features</a></li>
 			<li><a href="#api" onclick="$('#api').broadcast('wakeup');$(this).removeAttr('onclick');">API</a></li>
@@ -273,13 +273,13 @@ nextGen.previousCaptain();         // James T. Kirk
 nextGen.previousPreviousCaptain(); // Jonathan Archer</pre>
 				</div>
 
-                <div class="section" id="features-behaviors-intro" data-behaviors-lazy="Docs.ContentLoader" data-content="docs/behaviors/intro.htm"></div>
-                <div class="section" id="features-behaviors-messaging"  data-behaviors-lazy="Docs.ContentLoader" data-content="docs/behaviors/messaging.htm"></div>
-                <div class="section" id="features-behaviors-data"  data-behaviors-lazy="Docs.ContentLoader" data-content="docs/behaviors/data.htm"></div>
-                <div class="section" id="features-behaviors-combine"  data-behaviors-lazy="Docs.ContentLoader" data-content="docs/behaviors/combine.htm"></div>
-                <div class="section" id="features-behaviors-events"  data-behaviors-lazy="Docs.ContentLoader" data-content="docs/behaviors/events.htm"></div>
-                <div class="section" id="features-behaviors-queues"  data-behaviors-lazy="Docs.ContentLoader" data-content="docs/behaviors/queues.htm"></div>
-                <div class="section" id="features-behaviors-advanced"  data-behaviors-lazy="Docs.ContentLoader" data-content="docs/behaviors/advanced.htm"></div>
+                <div class="section" id="features-behaviors-intro" data-behaviors-lazy="docs.ContentLoader" data-content="docs/behaviors/intro.htm"></div>
+                <div class="section" id="features-behaviors-messaging"  data-behaviors-lazy="docs.ContentLoader" data-content="docs/behaviors/messaging.htm"></div>
+                <div class="section" id="features-behaviors-data"  data-behaviors-lazy="docs.ContentLoader" data-content="docs/behaviors/data.htm"></div>
+                <div class="section" id="features-behaviors-combine"  data-behaviors-lazy="docs.ContentLoader" data-content="docs/behaviors/combine.htm"></div>
+                <div class="section" id="features-behaviors-events"  data-behaviors-lazy="docs.ContentLoader" data-content="docs/behaviors/events.htm"></div>
+                <div class="section" id="features-behaviors-queues"  data-behaviors-lazy="docs.ContentLoader" data-content="docs/behaviors/queues.htm"></div>
+                <div class="section" id="features-behaviors-advanced"  data-behaviors-lazy="docs.ContentLoader" data-content="docs/behaviors/advanced.htm"></div>
 				
 				<div class="section" id="features-domdata-basics">
 					<h3>Features - DOM Data - Basics</h3>
@@ -370,14 +370,14 @@ $.assert.areEqual('Hello World', object.message);</pre>
 $.testing.runAll();</pre>
 				</div>
 
-                <div class="section" id="features-case-pong1"  data-behaviors-lazy="Docs.ContentLoader" data-content="docs/casestudy/pong1.htm"></div>
-                <div class="section" id="features-case-pong2"  data-behaviors-lazy="Docs.ContentLoader" data-content="docs/casestudy/pong2.htm"></div>
+                <div class="section" id="features-case-pong1"  data-behaviors-lazy="docs.ContentLoader" data-content="docs/casestudy/pong1.htm"></div>
+                <div class="section" id="features-case-pong2"  data-behaviors-lazy="docs.ContentLoader" data-content="docs/casestudy/pong2.htm"></div>
 			</div>
 			
-			<div class="accordion" data-behaviors-eager="Docs.Accordion" data-auto-height="false" data-navigation="true" data-collapsible="true">
+			<div class="accordion" data-behaviors-eager="docs.Accordion" data-auto-height="false" data-navigation="true" data-collapsible="true">
 				<h3><a href="#">Classes</a></h3>
 				<div>
-					<ul data-behaviors-eager="Tact.Docs.SectionSelector">
+					<ul data-behaviors-eager="Tact.docs.SectionSelector">
 						<li data-section="features-classes-basics">Class Declaration</li>
 						<li data-section="features-classes-inherit">Inheritence</li>
 						<li data-section="features-classes-typecheck">Type Checking</li>
@@ -386,7 +386,7 @@ $.testing.runAll();</pre>
 				</div>
 				<h3><a href="#">Behaviors</a></h3>
 				<div>
-					<ul data-behaviors-eager="Tact.Docs.SectionSelector" data-load-content="true">
+					<ul data-behaviors-eager="Tact.docs.SectionSelector" data-load-content="true">
 						<li data-section="features-behaviors-intro">Intro</li>
 						<li data-section="features-behaviors-messaging">Message and Broadcast</li>
 						<li data-section="features-behaviors-data">Using DOM Data</li>
@@ -404,31 +404,31 @@ $.testing.runAll();</pre>
 				</div>
 				<h3><a href="#">DOM Data</a></h3>
 				<div>
-					<ul data-behaviors-eager="Tact.Docs.SectionSelector">
+					<ul data-behaviors-eager="Tact.docs.SectionSelector">
 						<li data-section="features-domdata-basics">Basics</li>
 					</ul>
 				</div>
 				<h3><a href="#">Dependency Injection</a></h3>
 				<div>
-					<ul data-behaviors-eager="Tact.Docs.SectionSelector">
+					<ul data-behaviors-eager="Tact.docs.SectionSelector">
 						<li data-section="features-di-basics">Basics</li>
 					</ul>
 				</div>
 				<h3><a href="#">Client Side Storage</a></h3>
 				<div>
-					<ul data-behaviors-eager="Tact.Docs.SectionSelector">
+					<ul data-behaviors-eager="Tact.docs.SectionSelector">
 						<li data-section="features-storage-basics">Basics</li>
 					</ul>
 				</div>
 				<h3><a href="#">Unit Testing</a></h3>
 				<div>
-					<ul data-behaviors-eager="Tact.Docs.SectionSelector">
+					<ul data-behaviors-eager="Tact.docs.SectionSelector">
 						<li data-section="features-testing-basics">Basics</li>
 					</ul>
 				</div>
                 <h3><a href="#">Case Study</a></h3>
 				<div>
-					<ul data-behaviors-eager="Tact.Docs.SectionSelector" data-load-content="true">
+					<ul data-behaviors-eager="Tact.docs.SectionSelector" data-load-content="true">
 						<li data-section="features-case-pong1">Pong 1</li>
                         <li data-section="features-case-pong2">Pong 2</li>
 					</ul>
@@ -599,7 +599,7 @@ $.testing.runAll();</pre>
 					<p>
 						@description Lazy loads a script by the passed in type.<br>
 						@param {string} typeName<br>
-						<span class="tab">The name & namespace of the class to load. Must correspond to file-system such that "Docs.Toggler" can be found at "Scripts/TactJS/Docs/Toggler.js</span><br>
+						<span class="tab">The name & namespace of the class to load. Must correspond to file-system such that "docs.Toggler" can be found at "Scripts/TactJS/Docs/Toggler.js</span><br>
 						@param {function} onLoaded<br>
 						<span class="tab">A function that will be invoked once the script has finished loading on the page.</span>
 					</p>
@@ -1561,10 +1561,10 @@ queue.pop('Stuff!'); // Queue function fired with: Stuff!</pre>
 				
 			</div>
 		
-			<div class="accordion" data-behaviors-lazy="Docs.Accordion"  data-auto-height="false" data-navigation="true" data-collapsible="true">
+			<div class="accordion" data-behaviors-lazy="docs.Accordion"  data-auto-height="false" data-navigation="true" data-collapsible="true">
 				<h3><a href="#">Static</a></h3>
 				<div>
-					<ul data-behaviors-lazy="Tact.Docs.SectionSelector">
+					<ul data-behaviors-lazy="Tact.docs.SectionSelector">
 						<li data-section="api-static-assert">assert<ul>
 							<li data-section="api-static-assert-areEqual">areEqual</li>
 							<li data-section="api-static-assert-fail">fail</li>
@@ -1624,7 +1624,7 @@ queue.pop('Stuff!'); // Queue function fired with: Stuff!</pre>
 				</div>
 				<h3><a href="#">Extensions</a></h3>
 				<div>
-					<ul data-behaviors-lazy="Tact.Docs.SectionSelector">
+					<ul data-behaviors-lazy="Tact.docs.SectionSelector">
 						<li data-section="api-extensions-primary">Primary<ul>
 							<li data-section="api-extensions-primary-behaviors">behaviors</li>
 							<li data-section="api-extensions-primary-domdata">domdata</li>
@@ -1650,7 +1650,7 @@ queue.pop('Stuff!'); // Queue function fired with: Stuff!</pre>
 				</div>
 				<h3><a href="#">Classes</a></h3>
 				<div>
-					<ul data-behaviors-lazy="Tact.Docs.SectionSelector">
+					<ul data-behaviors-lazy="Tact.docs.SectionSelector">
 						<li data-section="api-classes-behaviorcollection">Tact.BehaviorCollection<ul>
 							<li data-section="api-classes-behaviorcollection-constructor">constructor</li>
 							<li data-section="api-classes-behaviorcollection-addBehavior">addBehavior</li>

@@ -5,21 +5,21 @@
     subscribes to an event on another object which executes the subscriber methods when
     the event fires. Here we'll go through an example of using events to enhance behaviors.</p>
 <p>
-    For this page we'll need to modify our previous behaviors, <strong>Docs.Demos.Toggler</strong>
-    and <strong>Docs.Demos.Slider</strong> so that they can fire events. These modifications
+    For this page we'll need to modify our previous behaviors, <strong>docs.demos.Toggler</strong>
+    and <strong>docs.demos.Slider</strong> so that they can fire events. These modifications
     could be made to our original behaviors and not affect their functionality in the
     other examples, but for the sake of this document, I'm going to reproduce them under
-    the new namespace <strong>Docs.Demos.Eventable</strong>
+    the new namespace <strong>docs.demos.Eventable</strong>
 </p>
 <p>
     Here are our modified behaviors:</p>
 <h4>
-    Docs.Demos.Eventable.Toggler</h4>
-<pre>// Docs.Demos.Eventable.Toggler :: Toggles visibility of first child elements. 
+    docs.demos.eventable.Toggler</h4>
+<pre>// docs.demos.eventable.Toggler :: Toggles visibility of first child elements. 
 // Fires an event on toggle
 (function ($) {
-    $.types.ns('Docs.Demos.Eventable');
-    Docs.Demos.Eventable.Toggler = $.types.define(function () {
+    $.types.ns('docs.demos.Eventable');
+    docs.demos.eventable.Toggler = $.types.define(function () {
         var _context;
         var self = {
             init: function (context) {
@@ -36,12 +36,12 @@
     });
 })(jQuery);</pre>
 <h4>
-    Docs.Demos.Eventable.Slider</h4>
-<pre>// Docs.Demos.Eventable.Slider :: Slides the element a specified number of 
+    docs.demos.eventable.Slider</h4>
+<pre>// docs.demos.eventable.Slider :: Slides the element a specified number of 
 // pixels left or right. Fires events for it's actions.
 (function ($) {
-    $.types.ns('Docs.Demos.Eventable');
-    Docs.Demos.Eventable.Slider = $.types.define(function () {
+    $.types.ns('docs.demos.Eventable');
+    docs.demos.eventable.Slider = $.types.define(function () {
         var _context;
         var _data;
         var _slideDistance;
@@ -74,14 +74,14 @@
     will never actually exist on the element and the "fire()" call will simply do nothing.
 </p>
 <p>
-    Let's look at an example of subscribing and unsibscribing events using <strong>Docs.Demos.Eventable.Toggler</strong>:</p>
+    Let's look at an example of subscribing and unsibscribing events using <strong>docs.demos.eventable.Toggler</strong>:</p>
 <pre>&lt;input type=&quot;button&quot; 
     onclick=&quot;$(&#39;#eventToggle&#39;).eventSubscribe(&#39;onToggle&#39;,function(){alert(&#39;toggled&#39;);})&quot;
     value=&quot;Add Delegate&quot; /&gt;
 &lt;input type=&quot;button&quot; 
     onclick=&quot;$(&#39;#eventToggle&#39;).eventUnsubscribe(&#39;onToggle&#39;,function(){alert(&#39;toggled&#39;);})&quot;
     value=&quot;Remove Delegate&quot; /&gt;
-&lt;div class=&quot;square mas&quot; data-behaviors-eager=&quot;Docs.Demos.Eventable.Toggler&quot; 
+&lt;div class=&quot;square mas&quot; data-behaviors-eager=&quot;docs.demos.eventable.Toggler&quot; 
     id=&quot;eventToggle&quot; &gt; 
     &lt;div class=&quot;square bg-green pointer toggle-off&quot; 
         onclick=&quot;$(this).parent().msg(&#39;toggle&#39;)&quot;&gt;
@@ -99,7 +99,7 @@
     value="Add Delegate" />
 <input type="button" onclick="$('#eventToggle').eventUnsubscribe('onToggle', function(){alert('toggled');})"
     value="Remove Delegate" />
-<div class="square mas" data-behaviors-eager="Docs.Demos.Eventable.Toggler" id="eventToggle">
+<div class="square mas" data-behaviors-eager="docs.demos.eventable.Toggler" id="eventToggle">
     <div class="square bg-green pointer toggle-off" onclick="$(this).parent().msg('toggle')">
     </div>
     <div class="square bg-red pointer toggle-on" onclick="$(this).parent().msg('toggle')">
@@ -116,23 +116,23 @@
     Clicking "Remove Delegate" call <strong>$.fn.eventUnsubscribe(eventName, fn)</strong>
     which will remove the delegate that matches the function passed to it.</p>
 <h3>
-    Docs.Demos.Eventable.SlideToggle</h3>
+    docs.demos.eventable.SlideToggle</h3>
 <p>
     This behavior depends on the previous two behaviors to be declared on the element.
     It uses the events on each to produce a new effect.</p>
-<pre>// Docs.Demos.Eventable.SlideToggler :: Slides the element a specified number of pixels
+<pre>// docs.demos.eventable.SlideToggler :: Slides the element a specified number of pixels
 // left or right and then toggles the first children.
 (function ($) {
-    if (!Docs.Demos.Eventable.Toggler) {
-        throw 'Initialization Error: Docs.Demos.Eventable.slideToggler 
-            requires Docs.Demos.Eventable.Toggler';
+    if (!docs.demos.eventable.Toggler) {
+        throw 'Initialization Error: docs.demos.eventable.slideToggler 
+            requires docs.demos.eventable.Toggler';
     }
-    if (!Docs.Demos.Eventable.Slider) {
-        throw 'Initialization Error: Docs.Demos.Eventable.slideToggler 
-            requires Docs.Demos.Eventable.Slider';
+    if (!docs.demos.eventable.Slider) {
+        throw 'Initialization Error: docs.demos.eventable.slideToggler 
+            requires docs.demos.eventable.Slider';
     }
-    $.types.ns('Docs.Demos.Eventable');
-    Docs.Demos.Eventable.SlideToggler = $.types.define(function () {
+    $.types.ns('docs.demos.Eventable');
+    docs.demos.eventable.SlideToggler = $.types.define(function () {
         var _context;
         var _lastSlideRight;
 
@@ -170,12 +170,12 @@
     out which direction to slide the element, and fires the appropriate message. It
     also calls it's private method <strong>setEvents()</strong> which safely unsubscribes
     and then resubscribes the <strong>toggleElement()</strong> method to "onSlideLeft"
-    and "onSlideRight" which are events fired by <strong>Docs.Demos.Eventable.Slider</strong></p>
+    and "onSlideRight" which are events fired by <strong>docs.demos.eventable.Slider</strong></p>
 <p>
-    Here's the markup that uses our example. Notice that we added <strong>Docs.Demos.Eventable.SlideToggler</strong>
+    Here's the markup that uses our example. Notice that we added <strong>docs.demos.eventable.SlideToggler</strong>
     and changed the message on it's childrent from "toggle" to "slideToggle"</p>
-<pre>&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;Docs.Demos.Eventable.Toggler 
-    Docs.Demos.Eventable.Slider Docs.Demos.Eventable.SlideToggler&quot;
+<pre>&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;docs.demos.eventable.Toggler 
+    docs.demos.eventable.Slider docs.demos.eventable.SlideToggler&quot;
     id=&quot;eventToggle&quot; data-slide-distance=&quot;200&quot; data-slide-time=&quot;2000&quot;&gt;
     &lt;div class=&quot;square bg-green pointer toggle-off&quot; 
         onclick=&quot;$(this).parent().msg(&#39;slideToggle&#39;)&quot;&gt;
@@ -186,7 +186,7 @@
 &lt;/div&gt;</pre>
 <p>
     Click the square below to see it in action.</p>
-<div class="square mas" data-behaviors-lazy="Docs.Demos.Eventable.Toggler Docs.Demos.Eventable.Slider Docs.Demos.Eventable.SlideToggler"
+<div class="square mas" data-behaviors-lazy="docs.demos.eventable.Toggler docs.demos.eventable.Slider docs.demos.eventable.SlideToggler"
     id="eventToggle" data-slide-distance="200" data-slide-time="2000">
     <div class="square bg-green pointer toggle-off" onclick="$(this).parent().msg('slideToggle')">
     </div>

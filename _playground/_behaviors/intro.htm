@@ -40,14 +40,14 @@
     </li>
 </ul>
 <p>
-    Now let's look at a very basic behavior called <strong>Docs.Demos.Toggler</strong>
+    Now let's look at a very basic behavior called <strong>docs.demos.Toggler</strong>
     which has one method to toggle the visibility of first children inside it's container.</p>
 <h3>
-    Docs.Demos.Toggler</h3>
-<pre>// Docs.Demos.Toggler :: Toggles visibility of first child elements
+    docs.demos.Toggler</h3>
+<pre>// docs.demos.Toggler :: Toggles visibility of first child elements
 (function ($) {
     $.types.ns('Docs');
-    Docs.Demos.Toggler = $.types.define(function () {
+    docs.demos.Toggler = $.types.define(function () {
         var _context;
         var _config;
         var self = {
@@ -118,14 +118,14 @@
     </ul>
 </p>
 <p>
-    Now let's see how to declare <strong>Docs.Demos.Toggler</strong> on an element with
+    Now let's see how to declare <strong>docs.demos.Toggler</strong> on an element with
     both <strong>data-behaviors-lazy</strong> and <strong>data-behaviors-eager</strong></p>
-<pre>&lt;div class=&quot;square mas&quot; div data-behaviors-lazy=&quot;Docs.Demos.Toggler&quot;&gt;
+<pre>&lt;div class=&quot;square mas&quot; div data-behaviors-lazy=&quot;docs.demos.Toggler&quot;&gt;
     &lt;div class=&quot;bg-green square pointer toggle-off&quot; &gt;&lt;/div&gt;
     &lt;div class=&quot;bg-red square pointer toggle-on&quot; &gt;&lt;/div&gt;
 &lt;/div&gt;                
             </pre>
-<div class="square mas" data-behaviors-lazy="Docs.Demos.Toggler">
+<div class="square mas" data-behaviors-lazy="docs.demos.Toggler">
     <div class="bg-green square pointer toggle-off">
     </div>
     <div class="bg-red square pointer toggle-on">
@@ -138,11 +138,11 @@
 <p>
     Let's see what happens when we change the markup to use <strong>data-behaviors-eager</strong>...
 </p>
-<pre>&lt;div class=&quot;square mas&quot; data-behaviors-eager=&quot;Docs.Demos.Toggler&quot; &gt;
+<pre>&lt;div class=&quot;square mas&quot; data-behaviors-eager=&quot;docs.demos.Toggler&quot; &gt;
     &lt;div class=&quot;bg-green square pointer toggle-off&quot; &gt;&lt;/div&gt;
     &lt;div class=&quot;bg-red square pointer toggle-on&quot; &gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
-<div class="square mas" data-behaviors-eager="Docs.Demos.Toggler">
+<div class="square mas" data-behaviors-eager="docs.demos.Toggler">
     <div class="bg-green square pointer toggle-off">
     </div>
     <div class="bg-red square pointer toggle-on">

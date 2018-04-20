@@ -1,6 +1,6 @@
 ﻿(function ($) {
-    $.types.ns('Pong2.Lib.Game');
-    Pong2.Lib.Game.Field = $.types.extend(Pong2.Lib.Game.Entity, function (height, width) {
+    $.types.ns('Pong2.lib.Game');
+    Pong2.lib.Game.Field = $.types.extend(Pong2.lib.Game.Entity, function (height, width) {
         var self = {
             
         };

@@ -1,7 +1,7 @@
-﻿// Docs.Eventable.Toggler :: Toggles visibility of first child elements. Fires an event on toggle
+﻿// docs.eventable.Toggler :: Toggles visibility of first child elements. Fires an event on toggle
 (function ($) {
-    $.types.ns('Docs.Demos.Eventable');
-    Docs.Demos.Eventable.Toggler = $.types.define(function () {
+    $.types.ns('docs.demos.Eventable');
+    docs.demos.eventable.Toggler = $.types.define(function () {
         var _context;
         var self = {
             init: function (context) {

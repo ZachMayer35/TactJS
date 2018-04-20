@@ -1,8 +1,8 @@
-﻿// Docs.tabs :: Jquery UI Tabs
+﻿// docs.tabs :: Jquery UI Tabs
 
 (function ($) {
     $.types.ns('Docs');
-    Docs.Tabs = $.types.define(function () {
+    docs.Tabs = $.types.define(function () {
         var _context;
         var self = {
             init: function (context) {

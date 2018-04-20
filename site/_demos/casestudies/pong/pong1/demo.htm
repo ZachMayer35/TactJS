@@ -27,13 +27,13 @@
     <h3>
         Iteration 1
     </h3>
-    <div id="court1" class="court" data-behaviors-eager="Pong1.UI.Court">
+    <div id="court1" class="court" data-behaviors-eager="pong1.ui.Court">
         <div class="scoreboard">
             <div class="score js-player1">
                 <div class="playerName">
                     Player 1
                 </div>
-                <div class="scoreValue" data-behaviors-eager="Pong1.UI.Updatable" data-key="player1">
+                <div class="scoreValue" data-behaviors-eager="pong1.ui.Updatable" data-key="player1">
                     0
                 </div>
             </div>
@@ -41,18 +41,18 @@
                 <div class="playerName">
                     Player 2
                 </div>
-                <div class="scoreValue" data-behaviors-eager="Pong1.UI.Updatable" data-key="player2">
+                <div class="scoreValue" data-behaviors-eager="pong1.ui.Updatable" data-key="player2">
                     0
                 </div>
             </div>
         </div>
         <div class="pongField" onmouseover="$(this).broadcast('activate');" onmouseout="$(this).broadcast('deactivate');">
-            <div class="pongPaddle js-player1" data-behaviors-eager="Pong1.UI.Paddle" data-controllable="true">
+            <div class="pongPaddle js-player1" data-behaviors-eager="pong1.ui.Paddle" data-controllable="true">
             </div>
-            <div class="pongBall" data-behaviors-eager="Pong1.UI.Ball" data-initial-direction="left"
+            <div class="pongBall" data-behaviors-eager="pong1.ui.Ball" data-initial-direction="left"
                 data-speed="1600">
             </div>
-            <div class="pongPaddle js-player2" data-behaviors-eager="Pong1.UI.Paddle" data-controllable="true">
+            <div class="pongPaddle js-player2" data-behaviors-eager="pong1.ui.Paddle" data-controllable="true">
             </div>
         </div>
     </div>

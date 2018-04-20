@@ -5,11 +5,11 @@
     they are again for reference:
 </p>
 <h4>
-    Docs.Demos.Toggler</h4>
-<pre>// Docs.Demos.Toggler :: Toggles visibility of first child elements
+    docs.demos.Toggler</h4>
+<pre>// docs.demos.Toggler :: Toggles visibility of first child elements
 (function ($) {
     $.types.ns('Docs');
-    Docs.Demos.Toggler = $.types.define(function () {
+    docs.demos.Toggler = $.types.define(function () {
         var _context;
         var _config;
         var self = {
@@ -27,11 +27,11 @@
     });
 })(jQuery);</pre>
 <h4>
-    Docs.Demos.Slider</h4>
-<pre>// Docs.Demos.Slider :: Slides the element a specified number of pixels left or right.
+    docs.demos.Slider</h4>
+<pre>// docs.demos.Slider :: Slides the element a specified number of pixels left or right.
 (function ($) {
     $.types.ns('Docs');
-    Docs.Demos.Slider = $.types.define(function () {
+    docs.demos.Slider = $.types.define(function () {
         var _context;
         var _data;
         var _slideDistance;
@@ -57,7 +57,7 @@
 })(jQuery);</pre>
 <p>
     Here's the markup we'll use to demonstrate these behaviors combined on one element.</p>
-<pre>&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;Docs.Demos.Toggler Docs.Demos.Slider&quot; 
+<pre>&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;docs.demos.Toggler docs.demos.Slider&quot; 
     id=&quot;togglerSlider&quot; data-slide-distance=&quot;200&quot; data-slide-time=&quot;2000&quot;&gt;
     &lt;div class=&quot;bg-green square pointer toggle-off&quot; 
         onclick=&quot;$(this).parent().msg(&#39;toggle&#39;).msg(&#39;slideLeft&#39;)&quot;&gt;&lt;/div&gt;
@@ -67,7 +67,7 @@
             </pre>
 <p>
     Click the red square below to see the demo in action.</p>
-<div class="square mas" data-behaviors-lazy="Docs.Demos.Toggler Docs.Demos.Slider"
+<div class="square mas" data-behaviors-lazy="docs.demos.Toggler docs.demos.Slider"
     id="togglerSlider" data-slide-distance="200" data-slide-time="2000">
     <div class="bg-green square pointer toggle-off" onclick="$(this).parent().msg('toggle').msg('slideLeft')">
     </div>

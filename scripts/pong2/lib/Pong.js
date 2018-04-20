@@ -1,6 +1,6 @@
 ﻿(function ($) {
-    $.types.ns('Pong2.Lib.Game');
-    Pong2.Lib.Game.Pong = $.types.define(function () {
+    $.types.ns('Pong2.lib.Game');
+    Pong2.lib.Game.Pong = $.types.define(function () {
         
         var self = {
         

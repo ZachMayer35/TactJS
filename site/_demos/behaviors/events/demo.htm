@@ -29,7 +29,7 @@
         value="Add Delegate" />
     <input type="button" onclick="$('#eventToggle').eventUnsubscribe('onToggle', function(){alert('toggled');})"
         value="Remove Delegate" />
-    <div class="square mas" data-behaviors-lazy="Docs.Demos.Eventable.Toggler" id="eventToggle">
+    <div class="square mas" data-behaviors-lazy="docs.demos.eventable.Toggler" id="eventToggle">
         <div class="square bg-green pointer toggle-off" onclick="$(this).parent().msg('toggle')">
         </div>
         <div class="square bg-red pointer toggle-on" onclick="$(this).parent().msg('toggle')">
@@ -39,7 +39,7 @@
     <h3>
         Events in behaviors (click the square)
     </h3>
-    <div class="square mas" data-behaviors-lazy="Docs.Demos.Eventable.Toggler Docs.Demos.Eventable.Slider Docs.Demos.Eventable.SlideToggler"
+    <div class="square mas" data-behaviors-lazy="docs.demos.eventable.Toggler docs.demos.eventable.Slider docs.demos.eventable.SlideToggler"
     id="eventToggle" data-slide-distance="200" data-slide-time="2000">
     <div class="square bg-green pointer toggle-off" onclick="$(this).parent().msg('slideToggle')">
     </div>

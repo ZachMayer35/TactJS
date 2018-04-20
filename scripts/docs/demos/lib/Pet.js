@@ -1,8 +1,8 @@
-﻿// Docs.Lib.Pet :: A simple pet class. Demonstrates class creation.
+﻿// docs.lib.Pet :: A simple pet class. Demonstrates class creation.
 
 (function ($) {
-    $.types.ns('Docs.Demos.Lib');
-    Docs.Demos.Lib.Pet = $.types.define(function (name) {
+    $.types.ns('docs.demos.Lib');
+    docs.demos.lib.Pet = $.types.define(function (name) {
         var _name = name;
 	    var _walkCount = 0;
 	    var self = {

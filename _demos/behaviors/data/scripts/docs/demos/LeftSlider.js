@@ -1,7 +1,7 @@
-﻿// Docs.LeftSlider :: Slides the element a specified number of pixels left.
+﻿// docs.LeftSlider :: Slides the element a specified number of pixels left.
 (function ($) {
-    $.types.ns('Docs.Demos');
-    Docs.Demos.LeftSlider = $.types.define(function () {
+    $.types.ns('docs.Demos');
+    docs.demos.LeftSlider = $.types.define(function () {
         var _context;
         var _data;
         var _slideDistance;

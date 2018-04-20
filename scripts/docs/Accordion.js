@@ -1,8 +1,8 @@
-﻿// Docs.tabs :: Jquery UI Accordion
+﻿// docs.tabs :: Jquery UI Accordion
 
 (function ($) {
     $.types.ns('Docs');
-    Docs.Accordion = $.types.define(function () {
+    docs.Accordion = $.types.define(function () {
         var _context;
         var _data;
         var initializeAccordion = function () {

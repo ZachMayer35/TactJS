@@ -1,8 +1,8 @@
-﻿// Docs.Logger :: Hooks onto unit tests and writes their results to the element.
+﻿// docs.Logger :: Hooks onto unit tests and writes their results to the element.
 
 (function ($) {
     $.types.ns('Docs');
-    Docs.Logger = $.types.define(function () {
+    docs.Logger = $.types.define(function () {
         var _context;
         var _data;
         var _log;

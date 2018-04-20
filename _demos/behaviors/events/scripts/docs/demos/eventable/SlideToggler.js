@@ -1,13 +1,13 @@
-﻿// Docs.Eventable.SlideToggler :: Slides the element a specified number of pixels left or right and then toggles the first children.
+﻿// docs.eventable.SlideToggler :: Slides the element a specified number of pixels left or right and then toggles the first children.
 (function ($) {
-    if (!Docs.Demos.Eventable.Toggler) {
-        throw 'Initialization Error: Docs.Demos.Eventable.slideToggler requires Docs.Demos.Eventable.Toggler';
+    if (!docs.demos.eventable.Toggler) {
+        throw 'Initialization Error: docs.demos.eventable.slideToggler requires docs.demos.eventable.Toggler';
     }
-    if (!Docs.Demos.Eventable.Slider) {
-        throw 'Initialization Error: Docs.Demos.Eventable.slideToggler requires Docs.Demos.Eventable.Slider';
+    if (!docs.demos.eventable.Slider) {
+        throw 'Initialization Error: docs.demos.eventable.slideToggler requires docs.demos.eventable.Slider';
     }
-    $.types.ns('Docs.Demos.Eventable');
-    Docs.Demos.Eventable.SlideToggler = $.types.define(function () {
+    $.types.ns('docs.demos.Eventable');
+    docs.demos.eventable.SlideToggler = $.types.define(function () {
         var _context;
         var _lastSlideRight;
 

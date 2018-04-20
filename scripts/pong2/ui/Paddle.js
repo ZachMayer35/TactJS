@@ -1,7 +1,7 @@
-﻿// Pong1.UI.Paddle :: A Pong Paddle controlled by either an AI or player.
+﻿// Pong1.ui.Paddle :: A Pong Paddle controlled by either an AI or player.
 (function ($) {
-    $.types.ns('Pong2.UI.Paddle');
-    Pong2.UI.Paddle = $.types.define(function () {
+    $.types.ns('Pong2.ui.Paddle');
+    Pong2.ui.Paddle = $.types.define(function () {
         var _context;
         var _field;
         var _config = {
@@ -19,7 +19,7 @@
             init: function (context) {
                 _context = context;
                 _config = $(_context).data();
-                _entity = new Pong2.Lib.Game.Paddle($(_context).outerHeight(), $(_context).outerWidth());
+                _entity = new Pong2.lib.Game.Paddle($(_context).outerHeight(), $(_context).outerWidth());
                 _entity.movement.setTick(_config.animationSpeed);
                 _entity.movement.onMove.subscribe(_onMovement);
             },

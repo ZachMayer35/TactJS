@@ -16,14 +16,14 @@
     <li>Keep individual behaviors in their own file which should be named the same as the
         behavior, minus the namespace.
         <div class="ind10">
-            If you have a behavior with the fully qualified name of "Docs.Demos.Toggler" then
+            If you have a behavior with the fully qualified name of "docs.demos.Toggler" then
             it should be in "toggler.js" (case doesn't matter).</div>
     </li>
     <li>If you want to be able to use the bootloader to find and load behaviors asynchronously
         when they are needed, put your behavior js file in a folder structure inside your
         _scriptsRoot which matches its namespace.
         <div class="ind10">
-            A behavior named "Docs.Demos.Toggler" should be located at "_scriptsRoot/Docs/Demos/toggler.js"
+            A behavior named "docs.demos.Toggler" should be located at "_scriptsRoot/Docs/Demos/toggler.js"
             (again, case doesn't matter).</div>
     </li>
 </ol>
@@ -47,15 +47,15 @@
     </li>
 </ol>
 <p>
-    Let's say you have a simple behavior called <strong>Docs.Demos.Toggler</strong>
+    Let's say you have a simple behavior called <strong>docs.demos.Toggler</strong>
     which is means to toggle a couple of classes on all the children in it's context...
 </p>
 <h3>
-    Docs.Demos.Toggler</h3>
-<pre>// Docs.Demos.Toggler :: Toggles visibility of first child elements
+    docs.demos.Toggler</h3>
+<pre>// docs.demos.Toggler :: Toggles visibility of first child elements
 (function ($) {
-    $.types.ns('Docs.Demos');
-    Docs.Demos.Toggler = $.types.define(function () {
+    $.types.ns('docs.Demos');
+    docs.demos.Toggler = $.types.define(function () {
         var _context;
         var self = {
             init: function (context) {
@@ -72,16 +72,16 @@
     If we wanted to make sure this behavior was available as soon as the page is rendered,
     we would declare it using the "eager" modifier like so.
 </p>
-<pre data-behaviors-eager="Docs.HTMLEncode">
-<div data-behaviors-eager="Docs.Demos.Toggler">
+<pre data-behaviors-eager="docs.HTMLEncode">
+<div data-behaviors-eager="docs.demos.Toggler">
 </div>
 </pre>
 <p>
     If on the other hand, we wanted the behavior to be loaded and acted against at some
     time after the page is rendered, we would declare it using the "lazy" modifier.
 </p>
-<pre data-behaviors-eager="Docs.HTMLEncode">
-<div data-behaviors-lazy="Docs.Demos.Toggler">
+<pre data-behaviors-eager="docs.HTMLEncode">
+<div data-behaviors-lazy="docs.demos.Toggler">
 </div>
 </pre>
 <p>

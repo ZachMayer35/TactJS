@@ -5,14 +5,14 @@
     on initialization. Simply adding a new attribute to the same element as the behavior
     will make the value of that attribute accessible to the behaviors on the element.</p>
 <p>
-    To demonstrate DOM Data, let's look at a new behavior called <strong>Docs.Demos.Slider</strong>
+    To demonstrate DOM Data, let's look at a new behavior called <strong>docs.demos.Slider</strong>
     which can consume DOM Data.</p>
 <h3>
-    Docs.Demos.Slider</h3>
-<pre>// Docs.Demos.Slider :: Slides the element a specified number of pixels left or right.
+    docs.demos.Slider</h3>
+<pre>// docs.demos.Slider :: Slides the element a specified number of pixels left or right.
 (function ($) {
     $.types.ns('Docs');
-    Docs.Demos.Slider = $.types.define(function () {
+    docs.demos.Slider = $.types.define(function () {
         var _context;
         var _data;
         var _slideDistance;
@@ -58,13 +58,13 @@
     value=&quot;Slide Right&quot; /&gt;
 &lt;input type=&quot;button&quot; onclick=&quot;$(&#39;#slideElement&#39;).msg(&#39;slideLeft&#39;)&quot; 
     value=&quot;Slide Left&quot; /&gt;
-&lt;div class=&quot;square mas&quot; data-behavior=&quot;Docs.Demos.Slider&quot; data-slide-distance=&quot;200&quot; 
+&lt;div class=&quot;square mas&quot; data-behavior=&quot;docs.demos.Slider&quot; data-slide-distance=&quot;200&quot; 
     data-slide-time=&quot;2000&quot; id=&quot;slideElement&quot;&gt;
     &lt;div class=&quot;square bg-red pointer&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
 <input type="button" onclick="$('#slideElement').msg('slideLeft')" value="Slide Left" />
 <input type="button" onclick="$('#slideElement').msg('slideRight')" value="Slide Right" />
-<div class="square mas" data-behaviors-lazy="Docs.Demos.Slider" data-slide-distance="200"
+<div class="square mas" data-behaviors-lazy="docs.demos.Slider" data-slide-distance="200"
     data-slide-time="2000" id="slideElement">
     <div class="square bg-red pointer">
     </div>
@@ -78,13 +78,13 @@
     value=&quot;Slide Right&quot; /&gt;
 &lt;input type=&quot;button&quot; onclick=&quot;$(&#39;#slideElementLong&#39;).msg(&#39;slideLeft&#39;)&quot; 
     value=&quot;Slide Left&quot; /&gt;
-&lt;div class=&quot;square mas&quot; data-behavior=&quot;Docs.Demos.Slider&quot; data-slide-distance=&quot;400&quot; 
+&lt;div class=&quot;square mas&quot; data-behavior=&quot;docs.demos.Slider&quot; data-slide-distance=&quot;400&quot; 
     data-slide-time=&quot;4000&quot; id=&quot;slideElementLong&quot;&gt;
     &lt;div class=&quot;square bg-red pointer&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
 <input type="button" onclick="$('#slideElementLong').msg('slideLeft')" value="Slide Left" />
 <input type="button" onclick="$('#slideElementLong').msg('slideRight')" value="Slide Right" />
-<div class="square mas" data-behaviors-lazy="Docs.Demos.Slider" data-slide-distance="400"
+<div class="square mas" data-behaviors-lazy="docs.demos.Slider" data-slide-distance="400"
     data-slide-time="4000" id="slideElementLong">
     <div class="square bg-red pointer">
     </div>
@@ -117,15 +117,15 @@
     </li>
 </ul>
 <p>
-    Let's change our above examples to two separate behaviors called <strong>Docs.Demos.RightSlider</strong>
-    and <strong>Docs.Demos.LeftSlider</strong>
+    Let's change our above examples to two separate behaviors called <strong>docs.demos.RightSlider</strong>
+    and <strong>docs.demos.LeftSlider</strong>
 </p>
 <h3>
-    Docs.Demos.RightSlider</h3>
-<pre>// Docs.Demos.RightSlider :: Slides the element a specified number of pixels right.
+    docs.demos.RightSlider</h3>
+<pre>// docs.demos.RightSlider :: Slides the element a specified number of pixels right.
 (function ($) {
     $.types.ns('Docs');
-    Docs.Demos.RightSlider = $.types.define(function () {
+    docs.demos.RightSlider = $.types.define(function () {
         var _context;
         var _data;
         var _slideDistance;
@@ -147,11 +147,11 @@
 })(jQuery);
             </pre>
 <h3>
-    Docs.Demos.LeftSlider</h3>
-<pre>// Docs.Demos.LeftSlider :: Slides the element a specified number of pixels left.
+    docs.demos.LeftSlider</h3>
+<pre>// docs.demos.LeftSlider :: Slides the element a specified number of pixels left.
 (function ($) {
     $.types.ns('Docs');
-    Docs.Demos.LeftSlider = $.types.define(function () {
+    docs.demos.LeftSlider = $.types.define(function () {
         var _context;
         var _data;
         var _slideDistance;
@@ -189,7 +189,7 @@
     value=&quot;Slide Left&quot; /&gt;
 &lt;input type=&quot;button&quot; onclick=&quot;$(&#39;#slideElementLong2&#39;).msg(&#39;slideRight&#39;)&quot; 
     value=&quot;Slide Right&quot; /&gt;
-&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;Docs.Demos.RightSlider Docs.Demos.LeftSlider&quot; 
+&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;docs.demos.RightSlider docs.demos.LeftSlider&quot; 
     rightslider-slide-distance=&quot;400&quot; rightslider-slide-time=&quot;4000&quot; 
     leftslider-slide-distance=&quot;200&quot; leftslider-slide-time=&quot;2000&quot; 
     id=&quot;slideElementLong2&quot;&gt;
@@ -207,7 +207,7 @@
 </p>
 <input type="button" onclick="$('#slideElementLong2').msg('slideLeft')" value="Slide Left" />
 <input type="button" onclick="$('#slideElementLong2').msg('slideRight')" value="Slide Right" />
-<div class="square mas" data-behaviors-lazy="Docs.Demos.RightSlider Docs.Demos.LeftSlider"
+<div class="square mas" data-behaviors-lazy="docs.demos.RightSlider docs.demos.LeftSlider"
     rightslider-slide-distance="400" rightslider-slide-time="4000" leftslider-slide-distance="200"
     leftslider-slide-time="2000" id="slideElementLong2">
     <div class="square bg-red pointer">
@@ -215,14 +215,14 @@
 </div>
 <p>
     To demonstrate recursion in domdata(), let's take a look at a slightly modified
-    version of Docs.Demos.Slider called <strong>Docs.Demos.DataSlider</strong>:
+    version of docs.demos.Slider called <strong>docs.demos.DataSlider</strong>:
 </p>
 <h3>
-    Docs.Demos.DataSlider</h3>
-<pre>// Docs.Demos.Slider :: Slides the element a specified number of pixels left or right.
+    docs.demos.DataSlider</h3>
+<pre>// docs.demos.Slider :: Slides the element a specified number of pixels left or right.
 (function ($) {
     $.types.ns('Docs');
-    Docs.Demos.DataSlider = $.types.define(function () {
+    docs.demos.DataSlider = $.types.define(function () {
         var _context;
         var _data;
         var _slideDistance;
@@ -252,13 +252,13 @@
     to the data- attributes of all the children of our element through a single call
     to domdata(true). This means we can declare our data on the markup in any children.
     Below is an example. Notice that the data-slide-time is declared on a child of the
-    element on which Docs.Demos.DataSlider is instantiated.
+    element on which docs.demos.DataSlider is instantiated.
 </p>
 <pre>&lt;input type=&quot;button&quot; onclick=&quot;$(&#39;#slideElementLong3&#39;).msg(&#39;slideLeft&#39;)&quot; 
     value=&quot;Slide Left&quot; /&gt;
 &lt;input type=&quot;button&quot; onclick=&quot;$(&#39;#slideElementLong3&#39;).msg(&#39;slideRight&#39;)&quot; 
     value=&quot;Slide Right&quot; /&gt;
-&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;Docs.Demos.DataSlider&quot; 
+&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;docs.demos.DataSlider&quot; 
     data-slide-distance=&quot;400&quot; id=&quot;slideElementLong3&quot;&gt;
     &lt;div class=&quot;square bg-red pointer&quot; data-slide-time=&quot;4000&quot;&gt;
     &lt;/div&gt;
@@ -266,7 +266,7 @@
             </pre>
 <input type="button" onclick="$('#slideElementLong3').msg('slideLeft')" value="Slide Left" />
 <input type="button" onclick="$('#slideElementLong3').msg('slideRight')" value="Slide Right" />
-<div class="square mas" data-behaviors-lazy="Docs.Demos.DataSlider" data-slide-distance="400"
+<div class="square mas" data-behaviors-lazy="docs.demos.DataSlider" data-slide-distance="400"
     id="slideElementLong3">
     <div class="square bg-red pointer" data-slide-time="4000">
     </div>

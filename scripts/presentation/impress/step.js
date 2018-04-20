@@ -1,7 +1,7 @@
-﻿// Presentation.Impress.Step :: A step in an impress presentation
+﻿// presentation.impress.Step :: A step in an impress presentation
 (function ($) {
-    $.types.ns('Presentation.Impress');
-    Presentation.Impress.Step = $.types.define(function () {
+    $.types.ns('presentation.impress');
+    presentation.impress.Step = $.types.define(function () {
         var _context;
         var _config;
         var _canvas;

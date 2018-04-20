@@ -1,7 +1,7 @@
-﻿// Docs.Queueable.Toggler :: Toggles visibility of first child elements. Fires an event on toggle, and unqueues.
+﻿// docs.queueable.Toggler :: Toggles visibility of first child elements. Fires an event on toggle, and unqueues.
 (function ($) {
-    $.types.ns('Docs.Demos.Queueable');
-    Docs.Demos.Queueable.Toggler = $.types.define(function () {
+    $.types.ns('docs.demos.Queueable');
+    docs.demos.queueable.Toggler = $.types.define(function () {
         var _context;
         var _config;
         var _toggleClass;

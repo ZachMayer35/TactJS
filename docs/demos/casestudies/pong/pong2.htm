@@ -32,13 +32,13 @@
     shells which do very little on their own except make calls to the library.
 </p>
 <hr />
-<div id="court3" class="court center" data-behaviors-lazy="Pong2.UI.Court" data-initial-direction="right">
+<div id="court3" class="court center" data-behaviors-lazy="pong2.ui.Court" data-initial-direction="right">
     <div class="scoreboard">
         <div class="score js-player1">
             <div class="playerName">
                 Player 1
             </div>
-            <div class="scoreValue" data-behaviors-lazy="Pong2.UI.Updatable" data-key="player1">
+            <div class="scoreValue" data-behaviors-lazy="pong2.ui.Updatable" data-key="player1">
                 0
             </div>
         </div>
@@ -46,19 +46,19 @@
             <div class="playerName">
                 Player 2
             </div>
-            <div class="scoreValue" data-behaviors-lazy="Pong2.UI.Updatable" data-key="player2">
+            <div class="scoreValue" data-behaviors-lazy="pong2.ui.Updatable" data-key="player2">
                 0
             </div>
         </div>
     </div>
     <div class="pongField" onmouseover="$(this).broadcast('activate', $(this).offset().top, this);"
         onmouseout="$(this).broadcast('deactivate');">
-        <div class="pongPaddle js-player1" data-behaviors-lazy="Pong2.UI.Paddle" data-controllable="true"
+        <div class="pongPaddle js-player1" data-behaviors-lazy="pong2.ui.Paddle" data-controllable="true"
             data-animation-speed="2" data-side="left">
         </div>
-        <div class="pongBall" data-behaviors-lazy="Pong2.UI.Ball" data-speed="1600" data-animation-speed="20">
+        <div class="pongBall" data-behaviors-lazy="pong2.ui.Ball" data-speed="1600" data-animation-speed="20">
         </div>
-        <div class="pongPaddle js-player2" data-behaviors-lazy="Pong2.UI.Paddle" data-controllable="true"
+        <div class="pongPaddle js-player2" data-behaviors-lazy="pong2.ui.Paddle" data-controllable="true"
             data-animation-speed="2" data-side="right">
         </div>
     </div>

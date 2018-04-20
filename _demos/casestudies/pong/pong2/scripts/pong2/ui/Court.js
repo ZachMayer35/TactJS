@@ -1,7 +1,7 @@
-﻿// Pong1.UI.Court :: Controlls and coordinates the various pieces of the Pong court
+﻿// Pong1.ui.Court :: Controlls and coordinates the various pieces of the Pong court
 (function ($) {
-    $.types.ns('Pong2.UI.Court');
-    Pong2.UI.Court = $.types.define(function () {
+    $.types.ns('Pong2.ui.Court');
+    Pong2.ui.Court = $.types.define(function () {
         var _context;
         var _config;
         var _field, _ball, _paddle1, _paddle2;
@@ -29,7 +29,7 @@
                 _paddle1.css('float', 'left');
                 _paddle2.css('float', 'right');
 
-                _fieldObj = new Pong2.Lib.Game.Field(_field.height(), _field.width());
+                _fieldObj = new Pong2.lib.Game.Field(_field.height(), _field.width());
 
                 $('.pongPaddle', _context).msg('setField', _fieldObj);
                 _ball.msg('setField', _fieldObj);

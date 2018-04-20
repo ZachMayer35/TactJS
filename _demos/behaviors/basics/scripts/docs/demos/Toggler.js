@@ -1,7 +1,7 @@
-﻿// Docs.Toggler :: Toggles visibility of first child elements
+﻿// docs.Toggler :: Toggles visibility of first child elements
 (function ($) {
-    $.types.ns('Docs.Demos');
-    Docs.Demos.Toggler = $.types.define(function () {
+    $.types.ns('docs.Demos');
+    docs.demos.Toggler = $.types.define(function () {
         var _context;
         var _config;
         var self = {

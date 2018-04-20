@@ -1,9 +1,9 @@
 ﻿// A simple Pet object
 (function ($) {
     // Define a namespace
-    $.types.ns("Docs.Demos");
+    $.types.ns("docs.Demos");
     // Define the Pet class.
-    Docs.Demos.Pet = $.types.define(function (name) {
+    docs.demos.Pet = $.types.define(function (name) {
         // Private Members
         var _name = name
         var _walkCount = 0;

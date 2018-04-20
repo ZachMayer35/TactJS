@@ -1,8 +1,8 @@
-﻿// Docs.Lib.Cat :: A Cat class that requires Docs.Lib.Pet. Demonstrates dependencies.
+﻿// docs.lib.Cat :: A Cat class that requires docs.lib.Pet. Demonstrates dependencies.
 
 (function ($) {
-    $.types.ns('Docs.Demos.Lib');
-    Docs.Demos.Lib.Cat = $.types.extend(Docs.Demos.Lib.Pet, function (name) {
+    $.types.ns('docs.demos.Lib');
+    docs.demos.lib.Cat = $.types.extend(docs.demos.lib.Pet, function (name) {
         var _speak = "Meow";
         var self = {
             box: new Tact.Dependency('IBox'),
@@ -15,10 +15,10 @@
         };
         return self;
     });
-    $.ioc.register('ICat', Docs.Demos.Lib.Cat);
+    $.ioc.register('ICat', docs.demos.lib.Cat);
 
     // declaration in a separate file is forgone since this is only used with Cat.
-    Docs.Demos.Lib.LitterBox = $.types.define(function () {
+    docs.demos.lib.LitterBox = $.types.define(function () {
         var _isStinky = false;
         var self = {
             poop: function () {
@@ -33,6 +33,6 @@
         };
         return self;
     });    
-    $.ioc.register('IBox', Docs.Demos.Lib.LitterBox);
+    $.ioc.register('IBox', docs.demos.lib.LitterBox);
 })(jQuery);
 

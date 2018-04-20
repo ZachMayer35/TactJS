@@ -1,9 +1,9 @@
-﻿// a Dog object which extends Docs.Demos.Pet
+﻿// a Dog object which extends docs.demos.Pet
 (function ($) {
     // Define a namespace
-    $.types.ns("Docs.Demos");
+    $.types.ns("docs.Demos");
     // Define the Dog class.
-    Docs.Demos.Dog = $.types.extend(Docs.Demos.Pet, function (name) {
+    docs.demos.Dog = $.types.extend(docs.demos.Pet, function (name) {
         // Private Members
         var _speak = "Woof!";
 

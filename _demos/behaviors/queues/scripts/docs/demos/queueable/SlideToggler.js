@@ -1,13 +1,13 @@
-﻿// Docs.Queueable.SlideToggler :: Slides the element a specified number of pixels left or right and then toggles the first children.
+﻿// docs.queueable.SlideToggler :: Slides the element a specified number of pixels left or right and then toggles the first children.
 (function ($) {
-    if (!Docs.Demos.Queueable.Toggler) {
-        throw 'Initialization Error: Docs.Demos.Queueable.slideToggler requires Docs.Demos.Queueable.Toggler';
+    if (!docs.demos.queueable.Toggler) {
+        throw 'Initialization Error: docs.demos.queueable.slideToggler requires docs.demos.queueable.Toggler';
     }
-    if (!Docs.Demos.Queueable.Slider) {
-        throw 'Initialization Error: Docs.Demos.Queueable.slideToggler requires Docs.Demos.Queueable.Slider';
+    if (!docs.demos.queueable.Slider) {
+        throw 'Initialization Error: docs.demos.queueable.slideToggler requires docs.demos.queueable.Slider';
     }
-    $.types.ns('Docs.Demos.Queueable');
-    Docs.Demos.Queueable.SlideToggler = $.types.define(function () {
+    $.types.ns('docs.demos.Queueable');
+    docs.demos.queueable.SlideToggler = $.types.define(function () {
         var _context;
         var _lastSlideRight;
 

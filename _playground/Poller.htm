@@ -16,7 +16,7 @@
     <script type="text/javascript">
     (function ($) {
         $.types.ns('Docs');
-        Docs.DataPoll = $.types.define(function () {
+        docs.DataPoll = $.types.define(function () {
             var _context;
             var _config;
             var _active = true;
@@ -82,8 +82,8 @@
     })(jQuery);
 
     (function ($) {
-        $.types.ns('Docs.Handler');
-        Docs.Handler.Html = $.types.define(function () {
+        $.types.ns('docs.Handler');
+        docs.Handler.Html = $.types.define(function () {
             var _context;            
             var self = {
                 init: function (context) {
@@ -101,7 +101,7 @@
 </head>
 <body>
 
-<div data-behaviors-eager="Docs.DataPoll Docs.Handler.Html" data-method="GET" data-action="CurrentTime.htm" data-interval="1000" data-inactive-after="10000">
+<div data-behaviors-eager="docs.DataPoll docs.Handler.Html" data-method="GET" data-action="CurrentTime.htm" data-interval="1000" data-inactive-after="10000">
     <div class="htmlResult">
     
     </div>

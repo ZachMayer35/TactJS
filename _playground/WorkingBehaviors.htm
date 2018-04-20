@@ -46,7 +46,7 @@
             <br />
         </div>
     </div>
-    <div data-behaviors-eager="Docs.Tabs" style="display: none;">
+    <div data-behaviors-eager="docs.Tabs" style="display: none;">
         <ul>
             <li><a href="#intro">Intro to Behaviors</a></li>
             <li><a href="#msg">Message and Broadcast</a></li>
@@ -98,14 +98,14 @@
                 </li>
             </ul>
             <p>
-                Now let's look at a very basic behavior called <strong>Docs.Demos.Toggler</strong> which
+                Now let's look at a very basic behavior called <strong>docs.demos.Toggler</strong> which
                 has one method to toggle the visibility of first children inside it's container.</p>
             <h3>
-                Docs.Demos.Toggler</h3>
-            <pre>// Docs.Demos.Toggler :: Toggles visibility of first child elements
+                docs.demos.Toggler</h3>
+            <pre>// docs.demos.Toggler :: Toggles visibility of first child elements
 (function ($) {
     $.types.ns('Docs');
-    Docs.Demos.Toggler = $.types.define(function () {
+    docs.demos.Toggler = $.types.define(function () {
         var _context;
         var _config;
         var self = {
@@ -176,14 +176,14 @@
                 </ul>
             </p>
             <p>
-                Now let's see how to declare <strong>Docs.Demos.Toggler</strong> on an element with both
+                Now let's see how to declare <strong>docs.demos.Toggler</strong> on an element with both
                 <strong>data-behaviors-lazy</strong> and <strong>data-behaviors-eager</strong></p>
-            <pre>&lt;div class=&quot;square mas&quot; div data-behaviors-lazy=&quot;Docs.Demos.Toggler&quot;&gt;
+            <pre>&lt;div class=&quot;square mas&quot; div data-behaviors-lazy=&quot;docs.demos.Toggler&quot;&gt;
     &lt;div class=&quot;bg-green square pointer toggle-off&quot; &gt;&lt;/div&gt;
     &lt;div class=&quot;bg-red square pointer toggle-on&quot; &gt;&lt;/div&gt;
 &lt;/div&gt;                
             </pre>
-            <div class="square mas" data-behaviors-lazy="Docs.Demos.Toggler">
+            <div class="square mas" data-behaviors-lazy="docs.demos.Toggler">
                 <div class="bg-green square pointer toggle-off">
                 </div>
                 <div class="bg-red square pointer toggle-on">
@@ -196,11 +196,11 @@
             <p>
                 Let's see what happens when we change the markup to use <strong>data-behaviors-eager</strong>...
             </p>
-            <pre>&lt;div class=&quot;square mas&quot; data-behaviors-eager=&quot;Docs.Demos.Toggler&quot; &gt;
+            <pre>&lt;div class=&quot;square mas&quot; data-behaviors-eager=&quot;docs.demos.Toggler&quot; &gt;
     &lt;div class=&quot;bg-green square pointer toggle-off&quot; &gt;&lt;/div&gt;
     &lt;div class=&quot;bg-red square pointer toggle-on&quot; &gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
-            <div class="square mas" data-behaviors-eager="Docs.Demos.Toggler">
+            <div class="square mas" data-behaviors-eager="docs.demos.Toggler">
                 <div class="bg-green square pointer toggle-off">
                 </div>
                 <div class="bg-red square pointer toggle-on">
@@ -234,16 +234,16 @@
                 </li>
             </ul>
             <p>
-                Let's take another look at <strong>Docs.Demos.Toggler</strong>...
+                Let's take another look at <strong>docs.demos.Toggler</strong>...
             </p>
             <h3>
                 Message</h3>
             <p>
-                Here we'll continue to use our <strong>Docs.Demos.Toggler</strong> class:</p>
-            <pre>// Docs.Demos.Toggler :: Toggles visibility of first child elements
+                Here we'll continue to use our <strong>docs.demos.Toggler</strong> class:</p>
+            <pre>// docs.demos.Toggler :: Toggles visibility of first child elements
 (function ($) {
     $.types.ns('Docs');
-    Docs.Demos.Toggler = $.types.define(function () {
+    docs.demos.Toggler = $.types.define(function () {
         var _context;
         var _config;
         var self = {
@@ -262,7 +262,7 @@
 })(jQuery);</pre>
             <p>
                 Notice the method <strong>toggle</strong> in the behavior's self. When we send a
-                message or broadcast of <strong>"toggle"</strong> to an element with <strong>Docs.Demos.Toggler</strong>,
+                message or broadcast of <strong>"toggle"</strong> to an element with <strong>docs.demos.Toggler</strong>,
                 we will invoke the <strong>toggle</strong> method for that element.
             </p>
             <p>
@@ -274,7 +274,7 @@
                 be skipped, likewise if the behavior has already been initialized.
             </p>
             <pre>&lt;input type=&quot;button&quot; onclick=&quot;$(&#39;#toggleOnClick&#39;).msg(&#39;toggle&#39;)&quot; value=&quot;Toggle Single Element&quot; /&gt;            
-&lt;div class=&quot;square mas&quot; data-behaviors-eager=&quot;Docs.Demos.Toggler&quot; id=&quot;toggleOnClick&quot;&gt;
+&lt;div class=&quot;square mas&quot; data-behaviors-eager=&quot;docs.demos.Toggler&quot; id=&quot;toggleOnClick&quot;&gt;
     &lt;div class=&quot;bg-green square pointer toggle-off&quot; &gt;
     &lt;/div&gt;
     &lt;div class=&quot;bg-red square pointer toggle-on&quot;&gt;
@@ -283,7 +283,7 @@
 
             </pre>
             <input type="button" onclick="$('#toggleOnClick').msg('toggle')" value="Toggle Single Element" />
-            <div class="square mas" data-behaviors-lazy="Docs.Demos.Toggler" id="toggleOnClick">
+            <div class="square mas" data-behaviors-lazy="docs.demos.Toggler" id="toggleOnClick">
                 <div class="bg-green square pointer toggle-off">
                 </div>
                 <div class="bg-red square pointer toggle-on">
@@ -301,19 +301,19 @@
                 the page and initialize the behaviors on their elements if necessary</p>
             <pre>&lt;input type=&quot;button&quot; onclick=&quot;$(&#39;#toggleBroadcast&#39;).broadcast(&#39;toggle&#39;)&quot; value=&quot;Toggle Multiple Elements&quot; /&gt;
 &lt;div id=&quot;toggleBroadcast&quot;&gt;
-    &lt;div class=&quot;square block&quot; data-behaviors-lazy=&quot;Docs.Demos.Toggler&quot; class=&quot;block&quot;&gt;
+    &lt;div class=&quot;square block&quot; data-behaviors-lazy=&quot;docs.demos.Toggler&quot; class=&quot;block&quot;&gt;
         &lt;div class=&quot;bg-green square pointer toggle-off&quot;&gt;
         &lt;/div&gt;
         &lt;div class=&quot;bg-red square pointer toggle-on&quot;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;square block&quot; data-behaviors-lazy=&quot;Docs.Demos.Toggler&quot; class=&quot;block&quot;&gt;
+    &lt;div class=&quot;square block&quot; data-behaviors-lazy=&quot;docs.demos.Toggler&quot; class=&quot;block&quot;&gt;
         &lt;div class=&quot;bg-green square pointer toggle-off&quot;&gt;
         &lt;/div&gt;
         &lt;div class=&quot;bg-red square pointer toggle-on&quot;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;square block&quot; data-behaviors-lazy=&quot;Docs.Demos.Toggler&quot; class=&quot;block&quot;&gt;
+    &lt;div class=&quot;square block&quot; data-behaviors-lazy=&quot;docs.demos.Toggler&quot; class=&quot;block&quot;&gt;
         &lt;div class=&quot;bg-green square pointer toggle-off&quot;&gt;
         &lt;/div&gt;
         &lt;div class=&quot;bg-red square pointer toggle-on&quot;&gt;
@@ -323,19 +323,19 @@
             </pre>
             <input type="button" onclick="$('#toggleBroadcast').broadcast('toggle')" value="Toggle Multiple Elements" />
             <div id="toggleBroadcast">
-                <div class="square block" data-behaviors-lazy="Docs.Demos.Toggler" class="block">
+                <div class="square block" data-behaviors-lazy="docs.demos.Toggler" class="block">
                     <div class="bg-green square pointer toggle-off">
                     </div>
                     <div class="bg-red square pointer toggle-on">
                     </div>
                 </div>
-                <div class="square block" data-behaviors-lazy="Docs.Demos.Toggler" class="block">
+                <div class="square block" data-behaviors-lazy="docs.demos.Toggler" class="block">
                     <div class="bg-green square pointer toggle-off">
                     </div>
                     <div class="bg-red square pointer toggle-on">
                     </div>
                 </div>
-                <div class="square block" data-behaviors-lazy="Docs.Demos.Toggler" class="block">
+                <div class="square block" data-behaviors-lazy="docs.demos.Toggler" class="block">
                     <div class="bg-green square pointer toggle-off">
                     </div>
                     <div class="bg-red square pointer toggle-on">
@@ -353,14 +353,14 @@
                 on initialization. Simply adding a new attribute to the same element as the behavior
                 will make the value of that attribute accessible to the behaviors on the element.</p>
             <p>
-                To demonstrate DOM Data, let's look at a new behavior called <strong>Docs.Demos.Slider</strong>
+                To demonstrate DOM Data, let's look at a new behavior called <strong>docs.demos.Slider</strong>
                 which can consume DOM Data.</p>
             <h3>
-                Docs.Demos.Slider</h3>
-            <pre>// Docs.Demos.Slider :: Slides the element a specified number of pixels left or right.
+                docs.demos.Slider</h3>
+            <pre>// docs.demos.Slider :: Slides the element a specified number of pixels left or right.
 (function ($) {
     $.types.ns('Docs');
-    Docs.Demos.Slider = $.types.define(function () {
+    docs.demos.Slider = $.types.define(function () {
         var _context;
         var _data;
         var _slideDistance;
@@ -402,12 +402,12 @@
             </p>
             <pre>&lt;input type=&quot;button&quot; onclick=&quot;$(&#39;#slideElement&#39;).msg(&#39;slideRight&#39;)&quot; value=&quot;Slide Right&quot; /&gt;
 &lt;input type=&quot;button&quot; onclick=&quot;$(&#39;#slideElement&#39;).msg(&#39;slideLeft&#39;)&quot; value=&quot;Slide Left&quot; /&gt;
-&lt;div class=&quot;square mas&quot; data-behavior=&quot;Docs.Demos.Slider&quot; data-slide-distance=&quot;200&quot; data-slide-time=&quot;2000&quot; id=&quot;slideElement&quot;&gt;
+&lt;div class=&quot;square mas&quot; data-behavior=&quot;docs.demos.Slider&quot; data-slide-distance=&quot;200&quot; data-slide-time=&quot;2000&quot; id=&quot;slideElement&quot;&gt;
     &lt;div class=&quot;square bg-red pointer&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
             <input type="button" onclick="$('#slideElement').msg('slideLeft')" value="Slide Left" />
             <input type="button" onclick="$('#slideElement').msg('slideRight')" value="Slide Right" />
-            <div class="square mas" data-behaviors-lazy="Docs.Demos.Slider" data-slide-distance="200"
+            <div class="square mas" data-behaviors-lazy="docs.demos.Slider" data-slide-distance="200"
                 data-slide-time="2000" id="slideElement">
                 <div class="square bg-red pointer">
                 </div>
@@ -419,12 +419,12 @@
             </p>
             <pre>&lt;input type=&quot;button&quot; onclick=&quot;$(&#39;#slideElementLong&#39;).msg(&#39;slideRight&#39;)&quot; value=&quot;Slide Right&quot; /&gt;
 &lt;input type=&quot;button&quot; onclick=&quot;$(&#39;#slideElementLong&#39;).msg(&#39;slideLeft&#39;)&quot; value=&quot;Slide Left&quot; /&gt;
-&lt;div class=&quot;square mas&quot; data-behavior=&quot;Docs.Demos.Slider&quot; data-slide-distance=&quot;400&quot; data-slide-time=&quot;4000&quot; id=&quot;slideElementLong&quot;&gt;
+&lt;div class=&quot;square mas&quot; data-behavior=&quot;docs.demos.Slider&quot; data-slide-distance=&quot;400&quot; data-slide-time=&quot;4000&quot; id=&quot;slideElementLong&quot;&gt;
     &lt;div class=&quot;square bg-red pointer&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
             <input type="button" onclick="$('#slideElementLong').msg('slideLeft')" value="Slide Left" />
             <input type="button" onclick="$('#slideElementLong').msg('slideRight')" value="Slide Right" />
-            <div class="square mas" data-behaviors-lazy="Docs.Demos.Slider" data-slide-distance="400"
+            <div class="square mas" data-behaviors-lazy="docs.demos.Slider" data-slide-distance="400"
                 data-slide-time="4000" id="slideElementLong">
                 <div class="square bg-red pointer">
                 </div>
@@ -457,15 +457,15 @@
                 </li>
             </ul>
             <p>
-                Let's change our above examples to two separate behaviors called <strong>Docs.Demos.RightSlider</strong>
-                and <strong>Docs.Demos.LeftSlider</strong>
+                Let's change our above examples to two separate behaviors called <strong>docs.demos.RightSlider</strong>
+                and <strong>docs.demos.LeftSlider</strong>
             </p>
             <h3>
-                Docs.Demos.RightSlider</h3>
-            <pre>// Docs.Demos.RightSlider :: Slides the element a specified number of pixels right.
+                docs.demos.RightSlider</h3>
+            <pre>// docs.demos.RightSlider :: Slides the element a specified number of pixels right.
 (function ($) {
     $.types.ns('Docs');
-    Docs.Demos.RightSlider = $.types.define(function () {
+    docs.demos.RightSlider = $.types.define(function () {
         var _context;
         var _data;
         var _slideDistance;
@@ -486,11 +486,11 @@
 })(jQuery);
             </pre>
             <h3>
-                Docs.Demos.LeftSlider</h3>
-            <pre>// Docs.Demos.LeftSlider :: Slides the element a specified number of pixels left.
+                docs.demos.LeftSlider</h3>
+            <pre>// docs.demos.LeftSlider :: Slides the element a specified number of pixels left.
 (function ($) {
     $.types.ns('Docs');
-    Docs.Demos.LeftSlider = $.types.define(function () {
+    docs.demos.LeftSlider = $.types.define(function () {
         var _context;
         var _data;
         var _slideDistance;
@@ -525,7 +525,7 @@
             </p>
             <pre>&lt;input type=&quot;button&quot; onclick=&quot;$(&#39;#slideElementLong2&#39;).msg(&#39;slideLeft&#39;)&quot; value=&quot;Slide Left&quot; /&gt;
 &lt;input type=&quot;button&quot; onclick=&quot;$(&#39;#slideElementLong2&#39;).msg(&#39;slideRight&#39;)&quot; value=&quot;Slide Right&quot; /&gt;
-&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;Docs.Demos.RightSlider Docs.Demos.LeftSlider&quot; rightslider-slide-distance=&quot;400&quot;
+&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;docs.demos.RightSlider docs.demos.LeftSlider&quot; rightslider-slide-distance=&quot;400&quot;
     rightslider-slide-time=&quot;4000&quot; leftslider-slide-distance=&quot;200&quot; leftslider-slide-time=&quot;2000&quot; id=&quot;slideElementLong2&quot;&gt;
     &lt;div class=&quot;square bg-red pointer&quot;&gt;
     &lt;/div&gt;
@@ -541,7 +541,7 @@
             </p>
             <input type="button" onclick="$('#slideElementLong2').msg('slideLeft')" value="Slide Left" />
             <input type="button" onclick="$('#slideElementLong2').msg('slideRight')" value="Slide Right" />
-            <div class="square mas" data-behaviors-lazy="Docs.Demos.RightSlider Docs.Demos.LeftSlider" rightslider-slide-distance="400"
+            <div class="square mas" data-behaviors-lazy="docs.demos.RightSlider docs.demos.LeftSlider" rightslider-slide-distance="400"
                 rightslider-slide-time="4000" leftslider-slide-distance="200" leftslider-slide-time="2000"
                 id="slideElementLong2">
                 <div class="square bg-red pointer">
@@ -549,14 +549,14 @@
             </div>
             <p>
                 To demonstrate recursion in domdata(), let's take a look at a slightly modified
-                version of Docs.Demos.Slider called <strong>Docs.Demos.DataSlider</strong>:
+                version of docs.demos.Slider called <strong>docs.demos.DataSlider</strong>:
             </p>
             <h3>
-                Docs.Demos.DataSlider</h3>
-            <pre>// Docs.Demos.Slider :: Slides the element a specified number of pixels left or right.
+                docs.demos.DataSlider</h3>
+            <pre>// docs.demos.Slider :: Slides the element a specified number of pixels left or right.
 (function ($) {
     $.types.ns('Docs');
-    Docs.Demos.DataSlider = $.types.define(function () {
+    docs.demos.DataSlider = $.types.define(function () {
         var _context;
         var _data;
         var _slideDistance;
@@ -584,11 +584,11 @@
                 to the data- attributes of all the children of our element through a single call
                 to domdata(true). This means we can declare our data on the markup in any children.
                 Below is an example. Notice that the data-slide-time is declared on a child of the
-                element on which Docs.Demos.DataSlider is instantiated.
+                element on which docs.demos.DataSlider is instantiated.
             </p>
             <pre>&lt;input type=&quot;button&quot; onclick=&quot;$(&#39;#slideElementLong3&#39;).msg(&#39;slideLeft&#39;)&quot; value=&quot;Slide Left&quot; /&gt;
 &lt;input type=&quot;button&quot; onclick=&quot;$(&#39;#slideElementLong3&#39;).msg(&#39;slideRight&#39;)&quot; value=&quot;Slide Right&quot; /&gt;
-&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;Docs.Demos.DataSlider&quot; data-slide-distance=&quot;400&quot;
+&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;docs.demos.DataSlider&quot; data-slide-distance=&quot;400&quot;
     id=&quot;slideElementLong3&quot;&gt;
     &lt;div class=&quot;square bg-red pointer&quot; data-slide-time=&quot;4000&quot;&gt;
     &lt;/div&gt;
@@ -596,7 +596,7 @@
             </pre>
             <input type="button" onclick="$('#slideElementLong3').msg('slideLeft')" value="Slide Left" />
             <input type="button" onclick="$('#slideElementLong3').msg('slideRight')" value="Slide Right" />
-            <div class="square mas" data-behaviors-lazy="Docs.Demos.DataSlider" data-slide-distance="400"
+            <div class="square mas" data-behaviors-lazy="docs.demos.DataSlider" data-slide-distance="400"
                 id="slideElementLong3">
                 <div class="square bg-red pointer" data-slide-time="4000">
                 </div>
@@ -615,11 +615,11 @@
                 they are again for reference:
             </p>
             <h4>
-                Docs.Demos.Toggler</h4>
-            <pre>// Docs.Demos.Toggler :: Toggles visibility of first child elements
+                docs.demos.Toggler</h4>
+            <pre>// docs.demos.Toggler :: Toggles visibility of first child elements
 (function ($) {
     $.types.ns('Docs');
-    Docs.Demos.Toggler = $.types.define(function () {
+    docs.demos.Toggler = $.types.define(function () {
         var _context;
         var _config;
         var self = {
@@ -637,11 +637,11 @@
     });
 })(jQuery);</pre>
             <h4>
-                Docs.Demos.Slider</h4>
-            <pre>// Docs.Demos.Slider :: Slides the element a specified number of pixels left or right.
+                docs.demos.Slider</h4>
+            <pre>// docs.demos.Slider :: Slides the element a specified number of pixels left or right.
 (function ($) {
     $.types.ns('Docs');
-    Docs.Demos.Slider = $.types.define(function () {
+    docs.demos.Slider = $.types.define(function () {
         var _context;
         var _data;
         var _slideDistance;
@@ -665,14 +665,14 @@
 })(jQuery);</pre>
             <p>
                 Here's the markup we'll use to demonstrate these behaviors combined on one element.</p>
-            <pre>&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;Docs.Demos.Toggler Docs.Demos.Slider&quot; id=&quot;togglerSlider&quot; data-slide-distance=&quot;200&quot; data-slide-time=&quot;2000&quot;&gt;
+            <pre>&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;docs.demos.Toggler docs.demos.Slider&quot; id=&quot;togglerSlider&quot; data-slide-distance=&quot;200&quot; data-slide-time=&quot;2000&quot;&gt;
     &lt;div class=&quot;bg-green square pointer toggle-off&quot; onclick=&quot;$(this).parent().msg(&#39;toggle&#39;).msg(&#39;slideLeft&#39;)&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;bg-red square pointer toggle-on&quot; onclick=&quot;$(this).parent().msg(&#39;toggle&#39;).msg(&#39;slideRight&#39;)&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;           
             </pre>
             <p>
                 Click the red square below to see the demo in action.</p>
-            <div class="square mas" data-behaviors-lazy="Docs.Demos.Toggler Docs.Demos.Slider" id="togglerSlider"
+            <div class="square mas" data-behaviors-lazy="docs.demos.Toggler docs.demos.Slider" id="togglerSlider"
                 data-slide-distance="200" data-slide-time="2000">
                 <div class="bg-green square pointer toggle-off" onclick="$(this).parent().msg('toggle').msg('slideLeft')">
                 </div>
@@ -695,20 +695,20 @@
                 subscribes to an event on another object which executes the subscriber methods when
                 the event fires. Here we'll go through an example of using events to enhance behaviors.</p>
             <p>
-                For this page we'll need to modify our previous behaviors, <strong>Docs.Demos.Toggler</strong>
-                and <strong>Docs.Demos.Slider</strong> so that they can fire events. These modifications
+                For this page we'll need to modify our previous behaviors, <strong>docs.demos.Toggler</strong>
+                and <strong>docs.demos.Slider</strong> so that they can fire events. These modifications
                 could be made to our original behaviors and not affect their functionality in the
                 other examples, but for the sake of this document, I'm going to reproduce them under
-                the new namespace <strong>Docs.Demos.Eventable</strong>
+                the new namespace <strong>docs.demos.Eventable</strong>
             </p>
             <p>
                 Here are our modified behaviors:</p>
             <h4>
-                Docs.Demos.Eventable.Toggler</h4>
-            <pre>// Docs.Demos.Eventable.Toggler :: Toggles visibility of first child elements. Fires an event on toggle
+                docs.demos.eventable.Toggler</h4>
+            <pre>// docs.demos.eventable.Toggler :: Toggles visibility of first child elements. Fires an event on toggle
 (function ($) {
-    $.types.ns('Docs.Demos.Eventable');
-    Docs.Demos.Eventable.Toggler = $.types.define(function () {
+    $.types.ns('docs.demos.Eventable');
+    docs.demos.eventable.Toggler = $.types.define(function () {
         var _context;
         var self = {
             init: function (context) {
@@ -725,11 +725,11 @@
     });
 })(jQuery);</pre>
             <h4>
-                Docs.Demos.Eventable.Slider</h4>
-            <pre>// Docs.Demos.Eventable.Slider :: Slides the element a specified number of pixels left or right. Fires events for it's actions.
+                docs.demos.eventable.Slider</h4>
+            <pre>// docs.demos.eventable.Slider :: Slides the element a specified number of pixels left or right. Fires events for it's actions.
 (function ($) {
-    $.types.ns('Docs.Demos.Eventable');
-    Docs.Demos.Eventable.Slider = $.types.define(function () {
+    $.types.ns('docs.demos.Eventable');
+    docs.demos.eventable.Slider = $.types.define(function () {
         var _context;
         var _data;
         var _slideDistance;
@@ -758,12 +758,12 @@
                 will never actually exist on the element and the "fire()" call will simply do nothing.
             </p>
             <p>
-                Let's look at an example of subscribing and unsibscribing events using <strong>Docs.Demos.Eventable.Toggler</strong>:</p>
+                Let's look at an example of subscribing and unsibscribing events using <strong>docs.demos.eventable.Toggler</strong>:</p>
             <pre>&lt;input type=&quot;button&quot; onclick=&quot;$(&#39;#eventToggle&#39;).eventSubscribe(&#39;onToggle&#39;, function(){alert(&#39;toggled&#39;);})&quot;
     value=&quot;Add Delegate&quot; /&gt;
 &lt;input type=&quot;button&quot; onclick=&quot;$(&#39;#eventToggle&#39;).eventUnsubscribe(&#39;onToggle&#39;, function(){alert(&#39;toggled&#39;);})&quot;
     value=&quot;Remove Delegate&quot; /&gt;
-&lt;div class=&quot;square mas&quot; data-behaviors-eager=&quot;Docs.Demos.Eventable.Toggler&quot; id=&quot;eventToggle&quot; &gt;
+&lt;div class=&quot;square mas&quot; data-behaviors-eager=&quot;docs.demos.eventable.Toggler&quot; id=&quot;eventToggle&quot; &gt;
     &lt;div class=&quot;square bg-green pointer toggle-off&quot; onclick=&quot;$(this).parent().msg(&#39;toggle&#39;)&quot;&gt;
     &lt;/div&gt;
     &lt;div class=&quot;square bg-red pointer toggle-on&quot; onclick=&quot;$(this).parent().msg(&#39;toggle&#39;)&quot;&gt;
@@ -778,7 +778,7 @@
                 value="Add Delegate" />
             <input type="button" onclick="$('#eventToggle').eventUnsubscribe('onToggle', function(){alert('toggled');})"
                 value="Remove Delegate" />
-            <div class="square mas" data-behaviors-eager="Docs.Demos.Eventable.Toggler" id="eventToggle" >
+            <div class="square mas" data-behaviors-eager="docs.demos.eventable.Toggler" id="eventToggle" >
                 <div class="square bg-green pointer toggle-off" onclick="$(this).parent().msg('toggle')">
                 </div>
                 <div class="square bg-red pointer toggle-on" onclick="$(this).parent().msg('toggle')">
@@ -795,20 +795,20 @@
                 Clicking "Remove Delegate" call <strong>$.fn.eventUnsubscribe(eventName, fn)</strong>
                 which will remove the delegate that matches the function passed to it.</p>
             <h3>
-                Docs.Demos.Eventable.SlideToggle</h3>
+                docs.demos.eventable.SlideToggle</h3>
             <p>
                 This behavior depends on the previous two behaviors to be declared on the element.
                 It uses the events on each to produce a new effect.</p>
-            <pre>// Docs.Demos.Eventable.SlideToggler :: Slides the element a specified number of pixels left or right and then toggles the first children.
+            <pre>// docs.demos.eventable.SlideToggler :: Slides the element a specified number of pixels left or right and then toggles the first children.
 (function ($) {
-    if (!Docs.Demos.Eventable.Toggler) {
-        throw 'Initialization Error: Docs.Demos.Eventable.slideToggler requires Docs.Demos.Eventable.Toggler';
+    if (!docs.demos.eventable.Toggler) {
+        throw 'Initialization Error: docs.demos.eventable.slideToggler requires docs.demos.eventable.Toggler';
     }
-    if (!Docs.Demos.Eventable.Slider) {
-        throw 'Initialization Error: Docs.Demos.Eventable.slideToggler requires Docs.Demos.Eventable.Slider';
+    if (!docs.demos.eventable.Slider) {
+        throw 'Initialization Error: docs.demos.eventable.slideToggler requires docs.demos.eventable.Slider';
     }
-    $.types.ns('Docs.Demos.Eventable');
-    Docs.Demos.Eventable.SlideToggler = $.types.define(function () {
+    $.types.ns('docs.demos.Eventable');
+    docs.demos.eventable.SlideToggler = $.types.define(function () {
         var _context;
         var _lastSlideRight;
 
@@ -846,11 +846,11 @@
                 out which direction to slide the element, and fires the appropriate message. It
                 also calls it's private method <strong>setEvents()</strong> which safely unsubscribes
                 and then resubscribes the <strong>toggleElement()</strong> method to "onSlideLeft"
-                and "onSlideRight" which are events fired by <strong>Docs.Demos.Eventable.Slider</strong></p>
+                and "onSlideRight" which are events fired by <strong>docs.demos.eventable.Slider</strong></p>
             <p>
-                Here's the markup that uses our example. Notice that we added <strong>Docs.Demos.Eventable.SlideToggler</strong>
+                Here's the markup that uses our example. Notice that we added <strong>docs.demos.eventable.SlideToggler</strong>
                 and changed the message on it's childrent from "toggle" to "slideToggle"</p>
-            <pre>&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;Docs.Demos.Eventable.Toggler Docs.Demos.Eventable.Slider Docs.Demos.Eventable.SlideToggler&quot;
+            <pre>&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;docs.demos.eventable.Toggler docs.demos.eventable.Slider docs.demos.eventable.SlideToggler&quot;
     id=&quot;eventToggle&quot; data-slide-distance=&quot;200&quot; data-slide-time=&quot;2000&quot;&gt;
     &lt;div class=&quot;square bg-green pointer toggle-off&quot; onclick=&quot;$(this).parent().msg(&#39;slideToggle&#39;)&quot;&gt;
     &lt;/div&gt;
@@ -859,7 +859,7 @@
 &lt;/div&gt;</pre>
             <p>
                 Click the square below to see it in action.</p>
-            <div class="square mas" data-behaviors-lazy="Docs.Demos.Eventable.Toggler Docs.Demos.Eventable.Slider Docs.Demos.Eventable.SlideToggler"
+            <div class="square mas" data-behaviors-lazy="docs.demos.eventable.Toggler docs.demos.eventable.Slider docs.demos.eventable.SlideToggler"
                 id="eventToggle" data-slide-distance="200" data-slide-time="2000">
                 <div class="square bg-green pointer toggle-off" onclick="$(this).parent().msg('slideToggle')">
                 </div>
@@ -882,16 +882,16 @@
                 extensions <strong>$.fn.enqueueMsg</strong> , <strong>$.fn.enqueueBroadcast</strong>,
                 and <strong>$.fn.unqueue</strong>.</p>
             <p>
-                For these examples I'm going to use slightly modified versions of <strong>Docs.Demos.Eventable.Toggler</strong>,
-                and <strong>Docs.Demos.Eventable.Slider</strong>. The modifications made would not affect
+                For these examples I'm going to use slightly modified versions of <strong>docs.demos.eventable.Toggler</strong>,
+                and <strong>docs.demos.eventable.Slider</strong>. The modifications made would not affect
                 any of the previous examples, but for the sake of clarity I'm going to put these
-                new versions in the namespace <strong>Docs.Demos.Queueable</strong>.</p>
+                new versions in the namespace <strong>docs.demos.Queueable</strong>.</p>
             <h3>
-                Docs.Demos.Queueable.Toggler</h3>
-            <pre>// Docs.Demos.Queueable.Toggler :: Toggles visibility of first child elements. Fires an event on toggle, and unqueues.
+                docs.demos.queueable.Toggler</h3>
+            <pre>// docs.demos.queueable.Toggler :: Toggles visibility of first child elements. Fires an event on toggle, and unqueues.
 (function ($) {
-    $.types.ns('Docs.Demos.Queueable');
-    Docs.Demos.Queueable.Toggler = $.types.define(function () {
+    $.types.ns('docs.demos.Queueable');
+    docs.demos.queueable.Toggler = $.types.define(function () {
         var _context;
         var _config;
         var _toggleClass;
@@ -916,11 +916,11 @@
                 <strong>toggleClass</strong> so that I can specify which class or classes I want
                 to toggle</p>
             <h3>
-                Docs.Demos.Queueable.Slider</h3>
-            <pre>// Docs.Demos.Queueable.Slider :: Slides the element a specified number of pixels left or right. Fires events for it's actions, and unqueues
+                docs.demos.queueable.Slider</h3>
+            <pre>// docs.demos.queueable.Slider :: Slides the element a specified number of pixels left or right. Fires events for it's actions, and unqueues
 (function ($) {
-    $.types.ns('Docs.Demos.Queueable');
-    Docs.Demos.Queueable.Slider = $.types.define(function () {
+    $.types.ns('docs.demos.Queueable');
+    docs.demos.queueable.Slider = $.types.define(function () {
         var _context;
         var _data;
         var _slideDistance;
@@ -948,9 +948,9 @@
                 in the queue. The inclusion of these calls is safe in the case of an empty queue,
                 and allows the queue to continue running.</p>
             <p>
-                Here's the markup for our first example using only <strong>Docs.Demos.Queueable.Slider</strong>:
+                Here's the markup for our first example using only <strong>docs.demos.queueable.Slider</strong>:
             </p>
-            <pre>&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;Docs.Demos.Queueable.Slider&quot; data-slide-time=&quot;2000&quot; data-slide-distance=&quot;200&quot;&gt;
+            <pre>&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;docs.demos.queueable.Slider&quot; data-slide-time=&quot;2000&quot; data-slide-distance=&quot;200&quot;&gt;
     &lt;div class=&quot;square bg-red pointer&quot; onclick=&quot;$(this).parent().enqueueMsg(&#39;slideRight&#39;).enqueueMsg(&#39;slideLeft&#39;).unqueue()&quot; /&gt;
 &lt;/div&gt;            
             </pre>
@@ -959,7 +959,7 @@
                 immediately by a call to <strong>unqueue()</strong> to start the queue.</p>
             <p>
                 When you click the square below you should see it move right, and then left.</p>
-            <div class="square mas" data-behaviors-lazy="Docs.Demos.Queueable.Slider" data-slide-time="2000"
+            <div class="square mas" data-behaviors-lazy="docs.demos.queueable.Slider" data-slide-time="2000"
                 data-slide-distance="200">
                 <div class="square bg-red pointer" onclick="$(this).parent().enqueueMsg('slideRight').enqueueMsg('slideLeft').unqueue()">
                 </div>
@@ -967,20 +967,20 @@
             <h3>
                 Putting It All Together</h3>
             <p>
-                Let's try a more complex example using <strong>Docs.Demos.Queueable.SlideToggler</strong>,
+                Let's try a more complex example using <strong>docs.demos.queueable.SlideToggler</strong>,
                 reproduced below for your convenience.</p>
             <h4>
-                Docs.Demos.Queueable.SlideToggler</h4>
-            <pre>// Docs.Demos.Queueable.SlideToggler :: Slides the element a specified number of pixels left or right and then toggles the first children.
+                docs.demos.queueable.SlideToggler</h4>
+            <pre>// docs.demos.queueable.SlideToggler :: Slides the element a specified number of pixels left or right and then toggles the first children.
 (function ($) {
-    if (!Docs.Demos.Queueable.Toggler) {
-        throw 'Initialization Error: Docs.Demos.Queueable.slideToggler requires Docs.Demos.Queueable.Toggler';
+    if (!docs.demos.queueable.Toggler) {
+        throw 'Initialization Error: docs.demos.queueable.slideToggler requires docs.demos.queueable.Toggler';
     }
-    if (!Docs.Demos.Queueable.Slider) {
-        throw 'Initialization Error: Docs.Demos.Queueable.slideToggler requires Docs.Demos.Queueable.Slider';
+    if (!docs.demos.queueable.Slider) {
+        throw 'Initialization Error: docs.demos.queueable.slideToggler requires docs.demos.queueable.Slider';
     }
-    $.types.ns('Docs.Demos.Eventable');
-    Docs.Demos.Queueable.SlideToggler = $.types.define(function () {
+    $.types.ns('docs.demos.Eventable');
+    docs.demos.queueable.SlideToggler = $.types.define(function () {
         var _context;
         var _lastSlideRight;
 
@@ -1020,14 +1020,14 @@
             <p>
                 The following markup demonstrates the combined effect of messaging, DOM data, combined
                 behaviors, eventing, and queueing.</p>
-            <pre>&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;Docs.Demos.Queueable.Toggler Docs.Demos.Queueable.Slider Docs.Demos.Queueable.SlideToggler&quot;
+            <pre>&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;docs.demos.queueable.Toggler docs.demos.queueable.Slider docs.demos.queueable.SlideToggler&quot;
     data-slide-time=&quot;2000&quot; data-slide-distance=&quot;200&quot; data-toggle-class=&quot;bg-red bg-green&quot;&gt;
     &lt;div class=&quot;square bg-red pointer toggle-on&quot; onclick=&quot;$(this).parent().enqueueMsg(&#39;slideToggle&#39;).enqueueMsg(&#39;slideToggle&#39;).unqueue()&quot;&gt;
     &lt;/div&gt;                
 &lt;/div&gt;</pre>
             <p>
                 Click the square below to see it in action.</p>
-            <div class="square mas" data-behaviors-lazy="Docs.Demos.Queueable.Toggler Docs.Demos.Queueable.Slider Docs.Demos.Queueable.SlideToggler"
+            <div class="square mas" data-behaviors-lazy="docs.demos.queueable.Toggler docs.demos.queueable.Slider docs.demos.queueable.SlideToggler"
                 data-slide-time="2000" data-slide-distance="200" data-toggle-class="bg-red bg-green">
                 <div class="square bg-red pointer toggle-on" onclick="$(this).parent().enqueueMsg('slideToggle').enqueueMsg('slideToggle').unqueue()">
                 </div>

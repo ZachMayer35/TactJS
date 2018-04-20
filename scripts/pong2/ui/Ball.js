@@ -1,7 +1,7 @@
-﻿// Pong1.UI.Ball :: A Pong Ball.
+﻿// Pong1.ui.Ball :: A Pong Ball.
 (function ($) {
-    $.types.ns('Pong2.UI.Ball');
-    Pong2.UI.Ball = $.types.define(function () {
+    $.types.ns('Pong2.ui.Ball');
+    Pong2.ui.Ball = $.types.define(function () {
         var _context;
         var _config = {
             speed: 1600,
@@ -37,7 +37,7 @@
                 _context = context;
                 _config = $(_context).data();
                 //initialize objects
-                _entity = new Pong2.Lib.Game.Ball($(_context).outerHeight(), $(_context).outerWidth());
+                _entity = new Pong2.lib.Game.Ball($(_context).outerHeight(), $(_context).outerWidth());
                 _entity.movement.setTick(_config.animationSpeed);
                 _entity.movement.onMove.subscribe(_onMovement);
                 _entity.movement.onMoveComplete.subscribe(_onMovementComplete);

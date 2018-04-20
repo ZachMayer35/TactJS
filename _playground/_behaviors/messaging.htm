@@ -21,16 +21,16 @@
     </li>
 </ul>
 <p>
-    Let's take another look at <strong>Docs.Demos.Toggler</strong>...
+    Let's take another look at <strong>docs.demos.Toggler</strong>...
 </p>
 <h3>
     Message</h3>
 <p>
-    Here we'll continue to use our <strong>Docs.Demos.Toggler</strong> class:</p>
-<pre>// Docs.Demos.Toggler :: Toggles visibility of first child elements
+    Here we'll continue to use our <strong>docs.demos.Toggler</strong> class:</p>
+<pre>// docs.demos.Toggler :: Toggles visibility of first child elements
 (function ($) {
     $.types.ns('Docs');
-    Docs.Demos.Toggler = $.types.define(function () {
+    docs.demos.Toggler = $.types.define(function () {
         var _context;
         var _config;
         var self = {
@@ -49,7 +49,7 @@
 })(jQuery);</pre>
 <p>
     Notice the method <strong>toggle</strong> in the behavior's self. When we send a
-    message or broadcast of <strong>"toggle"</strong> to an element with <strong>Docs.Demos.Toggler</strong>,
+    message or broadcast of <strong>"toggle"</strong> to an element with <strong>docs.demos.Toggler</strong>,
     we will invoke the <strong>toggle</strong> method for that element.
 </p>
 <p>
@@ -62,7 +62,7 @@
 </p>
 <pre>&lt;input type=&quot;button&quot; onclick=&quot;$(&#39;#toggleOnClick&#39;).msg(&#39;toggle&#39;)&quot; 
     value=&quot;Toggle Single Element&quot; /&gt;            
-&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;Docs.Demos.Toggler&quot; id=&quot;toggleOnClick&quot;&gt;
+&lt;div class=&quot;square mas&quot; data-behaviors-lazy=&quot;docs.demos.Toggler&quot; id=&quot;toggleOnClick&quot;&gt;
     &lt;div class=&quot;bg-green square pointer toggle-off&quot; &gt;
     &lt;/div&gt;
     &lt;div class=&quot;bg-red square pointer toggle-on&quot;&gt;
@@ -71,7 +71,7 @@
 
             </pre>
 <input type="button" onclick="$('#toggleOnClick').msg('toggle')" value="Toggle Single Element" />
-<div class="square mas" data-behaviors-lazy="Docs.Demos.Toggler" id="toggleOnClick">
+<div class="square mas" data-behaviors-lazy="docs.demos.Toggler" id="toggleOnClick">
     <div class="bg-green square pointer toggle-off">
     </div>
     <div class="bg-red square pointer toggle-on">
@@ -90,19 +90,19 @@
 <pre>&lt;input type=&quot;button&quot; onclick=&quot;$(&#39;#toggleBroadcast&#39;).broadcast(&#39;toggle&#39;)&quot; 
     value=&quot;Toggle Multiple Elements&quot; /&gt;
 &lt;div id=&quot;toggleBroadcast&quot;&gt;
-    &lt;div class=&quot;square block&quot; data-behaviors-lazy=&quot;Docs.Demos.Toggler&quot; class=&quot;block&quot;&gt;
+    &lt;div class=&quot;square block&quot; data-behaviors-lazy=&quot;docs.demos.Toggler&quot; class=&quot;block&quot;&gt;
         &lt;div class=&quot;bg-green square pointer toggle-off&quot;&gt;
         &lt;/div&gt;
         &lt;div class=&quot;bg-red square pointer toggle-on&quot;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;square block&quot; data-behaviors-lazy=&quot;Docs.Demos.Toggler&quot; class=&quot;block&quot;&gt;
+    &lt;div class=&quot;square block&quot; data-behaviors-lazy=&quot;docs.demos.Toggler&quot; class=&quot;block&quot;&gt;
         &lt;div class=&quot;bg-green square pointer toggle-off&quot;&gt;
         &lt;/div&gt;
         &lt;div class=&quot;bg-red square pointer toggle-on&quot;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;square block&quot; data-behaviors-lazy=&quot;Docs.Demos.Toggler&quot; class=&quot;block&quot;&gt;
+    &lt;div class=&quot;square block&quot; data-behaviors-lazy=&quot;docs.demos.Toggler&quot; class=&quot;block&quot;&gt;
         &lt;div class=&quot;bg-green square pointer toggle-off&quot;&gt;
         &lt;/div&gt;
         &lt;div class=&quot;bg-red square pointer toggle-on&quot;&gt;
@@ -112,19 +112,19 @@
             </pre>
 <input type="button" onclick="$('#toggleBroadcast').broadcast('toggle')" value="Toggle Multiple Elements" />
 <div id="toggleBroadcast">
-    <div class="square block" data-behaviors-lazy="Docs.Demos.Toggler" class="block">
+    <div class="square block" data-behaviors-lazy="docs.demos.Toggler" class="block">
         <div class="bg-green square pointer toggle-off">
         </div>
         <div class="bg-red square pointer toggle-on">
         </div>
     </div>
-    <div class="square block" data-behaviors-lazy="Docs.Demos.Toggler" class="block">
+    <div class="square block" data-behaviors-lazy="docs.demos.Toggler" class="block">
         <div class="bg-green square pointer toggle-off">
         </div>
         <div class="bg-red square pointer toggle-on">
         </div>
     </div>
-    <div class="square block" data-behaviors-lazy="Docs.Demos.Toggler" class="block">
+    <div class="square block" data-behaviors-lazy="docs.demos.Toggler" class="block">
         <div class="bg-green square pointer toggle-off">
         </div>
         <div class="bg-red square pointer toggle-on">

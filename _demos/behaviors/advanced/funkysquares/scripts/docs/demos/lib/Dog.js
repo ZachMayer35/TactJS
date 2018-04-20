@@ -1,8 +1,8 @@
-﻿// Docs.Lib.Dog :: A Dog class that requires Docs.Lib.Dog. Demonstrates class extensions.
+﻿// docs.lib.Dog :: A Dog class that requires docs.lib.Dog. Demonstrates class extensions.
 
 (function ($) {
-    $.types.ns('Docs.Demos.Lib');
-    Docs.Demos.Lib.Dog = $.types.extend(Docs.Demos.Lib.Pet, function (name) {
+    $.types.ns('docs.demos.Lib');
+    docs.demos.lib.Dog = $.types.extend(docs.demos.lib.Pet, function (name) {
         var _speak = "Woof";
         var self = {
             speak: function () {
